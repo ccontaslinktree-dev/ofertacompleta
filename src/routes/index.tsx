@@ -39,11 +39,11 @@ export const Route = createFileRoute("/")({
         content:
           "+250 sesiones interactivas, +2.000 ejercicios y Fútbol 360° completo. Acceso inmediato y de por vida. Promoción especial en homenaje al Mundial.",
       },
-      { property: "og:title", content: "Plataforma Completa de Entrenamiento de Fútbol" },
+      { property: "og:title", content: "Plataforma Completa de Entrenamiento de Fútbol · Homenaje al Mundial" },
       {
         property: "og:description",
         content:
-          "+250 sesiones · +2.000 ejercicios · Fútbol 360°. Todo por $15 USD, en homenaje al Mundial.",
+          "+250 sesiones interactivas, +2.000 ejercicios y Fútbol 360° completo. Acceso inmediato y de por vida. Promoción especial en homenaje al Mundial.",
       },
       { property: "og:image", content: coverAsset.url },
       { name: "twitter:image", content: coverAsset.url },

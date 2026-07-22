@@ -79,10 +79,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Plataforma Completa de Entrenamiento de Fútbol · Homenaje al Mundial" },
+      { property: "og:title", content: "Plataforma Completa de Entrenamiento de Fútbol · Homenaje al Mundial" },
+      { name: "twitter:title", content: "Plataforma Completa de Entrenamiento de Fútbol · Homenaje al Mundial" },
+      { name: "description", content: "+250 sesiones interactivas, +2.000 ejercicios y Fútbol 360° completo. Acceso inmediato y de por vida. Promoción especial en homenaje al Mundial." },
+      { property: "og:description", content: "+250 sesiones interactivas, +2.000 ejercicios y Fútbol 360° completo. Acceso inmediato y de por vida. Promoción especial en homenaje al Mundial." },
+      { name: "twitter:description", content: "+250 sesiones interactivas, +2.000 ejercicios y Fútbol 360° completo. Acceso inmediato y de por vida. Promoción especial en homenaje al Mundial." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ce19a79f-5415-458e-beaf-29e9ced7855a/id-preview-eb50692a--9f348445-8b2d-4f5a-b796-1d68477011f1.lovable.app-1784698681160.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ce19a79f-5415-458e-beaf-29e9ced7855a/id-preview-eb50692a--9f348445-8b2d-4f5a-b796-1d68477011f1.lovable.app-1784698681160.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
