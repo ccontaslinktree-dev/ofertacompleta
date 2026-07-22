@@ -10,7 +10,6 @@ import {
   Sparkles,
   RefreshCw,
   Smartphone,
-  Users,
   Trophy,
   Dumbbell,
   Library,
