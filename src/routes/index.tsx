@@ -18,12 +18,15 @@ import {
   Star,
 } from "lucide-react";
 
-import heroMockup from "@/assets/hero-mockup.jpg";
 import featureSessions from "@/assets/feature-sessions.jpg";
 import featureExercises from "@/assets/feature-exercises.jpg";
 import feature360 from "@/assets/feature-360.jpg";
 import videoAsset from "@/assets/video-demo.mp4.asset.json";
 import coverAsset from "@/assets/cover.png.asset.json";
+import player1 from "@/assets/player-1.jpg.asset.json";
+import player2 from "@/assets/player-2.jpg.asset.json";
+import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
+import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 
 // !!! REEMPLAZAR: link real del checkout de Hotmart !!!
 const CHECKOUT_LINK = "https://pay.hotmart.com/D106820400M?checkoutMode=10";
