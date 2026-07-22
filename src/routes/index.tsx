@@ -10,7 +10,6 @@ import {
   Sparkles,
   RefreshCw,
   Smartphone,
-  Users,
   Trophy,
   Dumbbell,
   Library,
@@ -18,12 +17,15 @@ import {
   Star,
 } from "lucide-react";
 
-import heroMockup from "@/assets/hero-mockup.jpg";
 import featureSessions from "@/assets/feature-sessions.jpg";
 import featureExercises from "@/assets/feature-exercises.jpg";
 import feature360 from "@/assets/feature-360.jpg";
 import videoAsset from "@/assets/video-demo.mp4.asset.json";
 import coverAsset from "@/assets/cover.png.asset.json";
+import player1 from "@/assets/player-1.jpg.asset.json";
+import player2 from "@/assets/player-2.jpg.asset.json";
+import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
+import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 
 // !!! REEMPLAZAR: link real del checkout de Hotmart !!!
 const CHECKOUT_LINK = "https://pay.hotmart.com/D106820400M?checkoutMode=10";
@@ -154,11 +156,11 @@ function LandingPage() {
 
           <div className="mt-12 md:mt-16" data-reveal>
             <img
-              src={heroMockup}
-              alt="Mockup de la plataforma de entrenamiento de fútbol en laptop y celular"
+              src={coverAsset.url}
+              alt="Plataforma Completa de Entrenamiento de Fútbol — Paquete Completo"
               width={1600}
-              height={1200}
-              className="mx-auto w-full max-w-4xl rounded-2xl shadow-elegant"
+              height={1600}
+              className="mx-auto w-full max-w-2xl rounded-2xl shadow-elegant"
             />
           </div>
         </div>
@@ -247,14 +249,19 @@ function LandingPage() {
 
       {/* ============ GALERÍA ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionTitle kicker="Vistas del producto" title="Así se ve por dentro" />
+        <SectionTitle kicker="En el campo" title="Entrenamientos que funcionan de verdad" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {[featureSessions, featureExercises, feature360, heroMockup].map((img, i) => (
+          {[
+            { src: player1.url, alt: "Jugador entrenando con balón en el campo" },
+            { src: featureSessions, alt: "Vista de sesiones de entrenamiento" },
+            { src: player2.url, alt: "Duelo uno contra uno en partido" },
+            { src: featureExercises, alt: "Biblioteca de +2.000 ejercicios" },
+          ].map((it, i) => (
             <img
               key={i}
               data-reveal
-              src={img}
-              alt={`Captura de plataforma ${i + 1}`}
+              src={it.src}
+              alt={it.alt}
               width={1200}
               height={900}
               loading="lazy"
@@ -292,12 +299,12 @@ function LandingPage() {
         <SectionTitle kicker="Testimonios reales" title="Entrenadores que ya lo usan" />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Ahorro horas cada semana. Ya no busco ejercicios sueltos, tengo todo en un solo lugar." },
-            { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico es oro puro. Mis jugadores mejoraron muchísimo." },
-            { n: "Diego R.", r: "DT Categoría Amateur, Argentina", t: "Vale 10 veces lo que pagué. Las sesiones interactivas son increíbles." },
-            { n: "Laura P.", r: "Coach Fútbol Femenino, Chile", t: "Finalmente material específico para mujeres. Excelente calidad." },
-            { n: "Miguel A.", r: "Escuela de Fútbol, Perú", t: "Los niños se enganchan con las sesiones. Nota alta de mis padres de familia." },
-            { n: "Roberto S.", r: "Entrenador de Base, España", t: "La biblioteca de 2.000 ejercicios es una locura. No me imaginé tanto contenido." },
+            { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Ahorro horas cada semana. Ya no busco ejercicios sueltos, tengo todo en un solo lugar.", img: testimonial1.url },
+            { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico es oro puro. Mis jugadores mejoraron muchísimo.", img: testimonial2.url },
+            { n: "Diego R.", r: "DT Categoría Amateur, Argentina", t: "Vale 10 veces lo que pagué. Las sesiones interactivas son increíbles.", img: testimonial1.url },
+            { n: "Laura P.", r: "Coach Fútbol Femenino, Chile", t: "Finalmente material específico para mujeres. Excelente calidad.", img: testimonial2.url },
+            { n: "Miguel A.", r: "Escuela de Fútbol, Perú", t: "Los niños se enganchan con las sesiones. Nota alta de mis padres de familia.", img: testimonial1.url },
+            { n: "Roberto S.", r: "Entrenador de Base, España", t: "La biblioteca de 2.000 ejercicios es una locura. No me imaginé tanto contenido.", img: testimonial2.url },
           ].map((t, i) => (
             <figure
               key={i}
@@ -313,10 +320,14 @@ function LandingPage() {
                 “{t.t}”
               </blockquote>
               <figcaption className="mt-4 flex items-center gap-3">
-                {/* !!! REEMPLAZAR: foto testimonio {i + 1} !!! */}
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/20 text-primary">
-                  <Users className="h-5 w-5" />
-                </div>
+                <img
+                  src={t.img}
+                  alt={t.n}
+                  width={44}
+                  height={44}
+                  loading="lazy"
+                  className="h-11 w-11 shrink-0 rounded-full object-cover border border-border"
+                />
                 <div>
                   <div className="text-sm font-bold">{t.n}</div>
                   <div className="text-xs text-muted-foreground">{t.r}</div>
