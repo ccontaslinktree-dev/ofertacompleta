@@ -294,14 +294,11 @@ function LandingPage() {
       {/* ============ TESTIMONIOS ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <SectionTitle kicker="Testimonios reales" title="Entrenadores que ya dejaron de improvisar" />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2">
           {[
             { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
             { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
-            { n: "Diego R.", r: "DT Categoría Amateur, Argentina", t: "Compré pensando que era 'otro más'. Me equivoqué. Es literalmente todo lo que necesitaba en un solo lugar.", img: testimonial1.url },
-            { n: "Laura P.", r: "Coach Fútbol Femenino, Chile", t: "Por fin material específico para mujeres, no adaptado. Cambió la forma en la que entreno a mi equipo.", img: testimonial2.url },
-            { n: "Miguel A.", r: "Escuela de Fútbol, Perú", t: "Los niños se enganchan con las sesiones. Los padres me felicitan cada semana. Sensación única.", img: testimonial1.url },
-            { n: "Roberto S.", r: "Entrenador de Base, España", t: "2.000 ejercicios. DOS MIL. No los agotas ni entrenando 10 años seguidos. Locura de contenido.", img: testimonial2.url },
+
           ].map((t, i) => (
             <figure
               key={i}
