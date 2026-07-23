@@ -6,7 +6,6 @@ import {
   Zap,
   CheckCircle2,
   XCircle,
-  Play,
   Sparkles,
   RefreshCw,
   Smartphone,
@@ -15,6 +14,8 @@ import {
   Library,
   LayoutGrid,
   Star,
+  Clock,
+  AlertTriangle,
 } from "lucide-react";
 
 import featureSessions from "@/assets/feature-sessions.jpg";
@@ -27,23 +28,22 @@ import player2 from "@/assets/player-2.jpg.asset.json";
 import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
 import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 
-// !!! REEMPLAZAR: link real del checkout de Hotmart !!!
 const CHECKOUT_LINK = "https://pay.hotmart.com/D106820400M?checkoutMode=10";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Plataforma Completa de Entrenamiento de Fútbol · Homenaje al Mundial" },
+      { title: "Plataforma Completa de Entrenamiento de Fútbol · Oferta Mundial $9,50" },
       {
         name: "description",
         content:
-          "+250 sesiones interactivas, +2.000 ejercicios y Fútbol 360° completo. Acceso inmediato y de por vida. Promoción especial en homenaje al Mundial.",
+          "TODO en un solo producto: +250 sesiones, +2.000 ejercicios y Fútbol 360° completo. Hoy por solo $9,50 USD — oferta por tiempo limitado en homenaje al Mundial.",
       },
-      { property: "og:title", content: "Plataforma Completa de Entrenamiento de Fútbol · Homenaje al Mundial" },
+      { property: "og:title", content: "Plataforma Completa de Entrenamiento de Fútbol · $9,50" },
       {
         property: "og:description",
         content:
-          "+250 sesiones interactivas, +2.000 ejercicios y Fútbol 360° completo. Acceso inmediato y de por vida. Promoción especial en homenaje al Mundial.",
+          "TODO en un solo producto: +250 sesiones, +2.000 ejercicios y Fútbol 360°. Hoy $9,50 USD — por tiempo limitado.",
       },
       { property: "og:image", content: coverAsset.url },
       { name: "twitter:image", content: coverAsset.url },
@@ -122,84 +122,102 @@ function LandingPage() {
 
   return (
     <div ref={ref} className="min-h-screen bg-background text-foreground">
-      {/* ============ HERO ============ */}
+      {/* ============ HERO (sin CTA, solo gancho fuerte) ============ */}
       <header className="relative overflow-hidden bg-hero">
         <div className="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(oklch(0.78_0.22_142/0.15)_1px,transparent_1px),linear-gradient(90deg,oklch(0.78_0.22_142/0.15)_1px,transparent_1px)] [background-size:60px_60px]" />
-        <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-10 sm:pt-14 md:pb-24">
+        <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-10 sm:pt-14 md:pb-20">
           <div className="mx-auto max-w-3xl text-center" data-reveal>
             <div className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-black uppercase tracking-widest text-gold-foreground shadow-lg sm:text-sm">
-              🔥 Promoción Especial — En Homenaje a la Copa del Mundo ⚽
+              🔥 Homenaje al Mundial · Oferta por Tiempo Limitado ⚽
             </div>
             <h1 className="mt-6 text-4xl font-black uppercase leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl">
-              En Homenaje al Mundial,
+              5 Productos en <span className="text-primary">1 Sola Plataforma</span>
               <br />
-              <span className="text-primary">Rompimos el Precio:</span>
-              <br />
-              Plataforma Completa de Entrenamiento de Fútbol
+              Para Entrenar Fútbol como un <span className="text-primary">Profesional</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg md:text-xl">
-              +250 sesiones interactivas + 2.000 ejercicios + Fútbol 360° completo.
-              Todo en un solo lugar, con acceso inmediato y <strong className="text-foreground">de por vida</strong>.
+              +250 sesiones interactivas · +2.000 ejercicios · Fútbol femenino, infantil y preparación física.
+              <br />
+              <strong className="text-foreground">Todo junto. Un solo pago. Acceso de por vida.</strong>
             </p>
-            <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
-              <Sparkles className="mr-1 inline h-4 w-4 text-gold" />
-              Actualizaciones automáticas: añadimos contenido constantemente. Tu plataforma crece contigo.
+            <p className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-sm font-bold text-foreground">
+              <Clock className="h-4 w-4 text-gold" />
+              Antes $92 USD · Hoy solo <span className="text-primary">$9,50 USD</span>
             </p>
-            <div className="mt-8 flex flex-col items-center gap-3">
-              <CTA>Quiero Mi Acceso Completo</CTA>
-              <p className="text-xs text-muted-foreground">
-                <ShieldCheck className="mr-1 inline h-4 w-4 text-primary" />
-                Pago 100% seguro · Acceso inmediato por e-mail
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-12 md:mt-16" data-reveal>
-            <img
-              src={coverAsset.url}
-              alt="Plataforma Completa de Entrenamiento de Fútbol — Paquete Completo"
-              width={1600}
-              height={1600}
-              className="mx-auto w-full max-w-2xl rounded-2xl shadow-elegant"
-            />
           </div>
         </div>
       </header>
 
-      {/* ============ PROBLEMA ============ */}
-      <section className="mx-auto max-w-4xl px-5 py-16 text-center md:py-24">
+      {/* ============ VIDEO (subido para generar deseo inmediato) ============ */}
+      <section className="mx-auto max-w-5xl px-5 pt-10 pb-12 md:pt-14 md:pb-16">
+        <div className="mx-auto mb-6 max-w-2xl text-center" data-reveal>
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
+            Mira lo que vas a recibir
+          </div>
+          <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl md:text-5xl">
+            Esto es lo que <span className="text-primary">TÚ vas a tener</span> en tus manos hoy
+          </h2>
+          <p className="mt-3 text-base text-muted-foreground sm:text-lg">
+            Dale play. En menos de 2 minutos vas a entender por qué esto vale 10 veces más de lo que cuesta.
+          </p>
+        </div>
+        <div
+          data-reveal
+          className="relative mx-auto aspect-video overflow-hidden rounded-2xl border border-border bg-black shadow-elegant"
+        >
+          <video
+            src={videoAsset.url}
+            controls
+            playsInline
+            preload="metadata"
+            poster={coverAsset.url}
+            className="h-full w-full"
+          >
+            <track kind="captions" />
+          </video>
+        </div>
+      </section>
+
+      {/* ============ PROBLEMA (dolor) ============ */}
+      <section className="mx-auto max-w-4xl px-5 py-16 text-center md:py-20">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-destructive/40 bg-destructive/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-destructive" data-reveal>
+          <AlertTriangle className="h-4 w-4" /> La dura verdad
+        </div>
         <p className="text-2xl font-bold leading-snug sm:text-3xl md:text-4xl" data-reveal>
-          Estás cansado de entrenar con <span className="text-destructive/90">ejercicios sueltos</span>,
-          sin estructura y sin una progresión clara.
-          <br />
-          <span className="text-muted-foreground">
-            Horas planificando cada sesión, buscando en videos, dibujando en papel…
-          </span>{" "}
-          <span className="text-primary">Se acabó.</span>
+          Cada semana pierdes <span className="text-destructive/90">horas buscando ejercicios en YouTube</span>,
+          copiando dibujos en papel y llegando al entrenamiento sintiendo que <em>improvisas</em>.
+        </p>
+        <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg" data-reveal>
+          Los jugadores lo notan. Los padres lo notan. Y tú, en el fondo, sabes que mereces preparar
+          sesiones con la misma calidad que un entrenador de élite — pero no tienes ni el tiempo ni
+          la biblioteca para hacerlo.
+        </p>
+        <p className="mx-auto mt-6 max-w-2xl text-lg font-bold text-primary sm:text-xl" data-reveal>
+          Hoy eso termina.
         </p>
       </section>
 
       {/* ============ SOLUCIÓN ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionTitle kicker="La solución" title="Todo en un solo lugar" />
+        <SectionTitle kicker="Todo en un solo producto" title="5 entregables premium · 1 sola plataforma" />
         <div className="grid gap-6 md:grid-cols-3">
           {[
             {
               icon: Library,
-              title: "Plataforma con +250 Sesiones",
-              text: "Sesiones de entrenamiento interactivas, organizadas por posición, categoría y edad. Listas para aplicar.",
+              title: "+250 Sesiones Interactivas",
+              text: "Sesiones completas listas para copiar y aplicar hoy mismo. Organizadas por posición, categoría y edad.",
               img: featureSessions,
             },
             {
               icon: LayoutGrid,
               title: "+2.000 Ejercicios de Fútbol",
-              text: "Biblioteca organizada de ejercicios con diagramas, objetivos y variantes. Todo estructurado para ti.",
+              text: "Biblioteca con diagramas, objetivos y variantes. Nunca más te vas a quedar sin ideas.",
               img: featureExercises,
             },
             {
               icon: Trophy,
               title: "Fútbol 360° Completo",
-              text: "Fútbol femenino, infantil y acondicionamiento físico. Tres paquetes premium incluidos.",
+              text: "Fútbol femenino + infantil + preparación física. Tres paquetes premium incluidos SIN pagar extra.",
               img: feature360,
             },
           ].map((c, i) => (
@@ -226,30 +244,9 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ============ VIDEO ============ */}
-      <section className="mx-auto max-w-5xl px-5 py-16 md:py-20">
-        <SectionTitle title="Mira por dentro la plataforma que vas a recibir" />
-        {/* !!! VIDEO_PLACEHOLDER — reemplaza el src por tu propio video subido !!! */}
-        <div
-          data-reveal
-          className="relative mx-auto aspect-video overflow-hidden rounded-2xl border border-border bg-black shadow-elegant"
-        >
-          <video
-            src={videoAsset.url}
-            controls
-            playsInline
-            preload="metadata"
-            poster={coverAsset.url}
-            className="h-full w-full"
-          >
-            <track kind="captions" />
-          </video>
-        </div>
-      </section>
-
       {/* ============ GALERÍA ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionTitle kicker="En el campo" title="Entrenamientos que funcionan de verdad" />
+        <SectionTitle kicker="En el campo" title="Imagina tu equipo entrenando así la próxima semana" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
             { src: player1.url, alt: "Jugador entrenando con balón en el campo" },
@@ -273,12 +270,12 @@ function LandingPage() {
 
       {/* ============ PASO A PASO ============ */}
       <section className="mx-auto max-w-5xl px-5 py-16 md:py-24">
-        <SectionTitle kicker="Cómo funciona" title="Empieza en 3 pasos" />
+        <SectionTitle kicker="Cómo funciona" title="En 3 minutos ya estás dentro" />
         <div className="grid gap-6 md:grid-cols-3">
           {[
             { icon: Smartphone, t: "Accede desde donde quieras", d: "Móvil, tablet u ordenador. Todo online, sin instalar nada." },
-            { icon: LayoutGrid, t: "Elige por posición, categoría o edad", d: "Filtros claros: encuentra lo que necesitas en segundos." },
-            { icon: Zap, t: "Abre el material y entrena", d: "Todo listo para aplicar en el campo, hoy mismo." },
+            { icon: LayoutGrid, t: "Filtra por posición, edad o categoría", d: "Encuentra la sesión perfecta en segundos, sin perder tiempo." },
+            { icon: Zap, t: "Copia, aplica y sorprende", d: "Sales al campo con material de nivel profesional. Hoy mismo." },
           ].map((s, i) => (
             <div key={i} data-reveal className="rounded-2xl border border-border bg-card p-6">
               <div className="flex items-center gap-3">
@@ -296,15 +293,15 @@ function LandingPage() {
 
       {/* ============ TESTIMONIOS ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionTitle kicker="Testimonios reales" title="Entrenadores que ya lo usan" />
+        <SectionTitle kicker="Testimonios reales" title="Entrenadores que ya dejaron de improvisar" />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Ahorro horas cada semana. Ya no busco ejercicios sueltos, tengo todo en un solo lugar.", img: testimonial1.url },
-            { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico es oro puro. Mis jugadores mejoraron muchísimo.", img: testimonial2.url },
-            { n: "Diego R.", r: "DT Categoría Amateur, Argentina", t: "Vale 10 veces lo que pagué. Las sesiones interactivas son increíbles.", img: testimonial1.url },
-            { n: "Laura P.", r: "Coach Fútbol Femenino, Chile", t: "Finalmente material específico para mujeres. Excelente calidad.", img: testimonial2.url },
-            { n: "Miguel A.", r: "Escuela de Fútbol, Perú", t: "Los niños se enganchan con las sesiones. Nota alta de mis padres de familia.", img: testimonial1.url },
-            { n: "Roberto S.", r: "Entrenador de Base, España", t: "La biblioteca de 2.000 ejercicios es una locura. No me imaginé tanto contenido.", img: testimonial2.url },
+            { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
+            { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
+            { n: "Diego R.", r: "DT Categoría Amateur, Argentina", t: "Compré pensando que era 'otro más'. Me equivoqué. Es literalmente todo lo que necesitaba en un solo lugar.", img: testimonial1.url },
+            { n: "Laura P.", r: "Coach Fútbol Femenino, Chile", t: "Por fin material específico para mujeres, no adaptado. Cambió la forma en la que entreno a mi equipo.", img: testimonial2.url },
+            { n: "Miguel A.", r: "Escuela de Fútbol, Perú", t: "Los niños se enganchan con las sesiones. Los padres me felicitan cada semana. Sensación única.", img: testimonial1.url },
+            { n: "Roberto S.", r: "Entrenador de Base, España", t: "2.000 ejercicios. DOS MIL. No los agotas ni entrenando 10 años seguidos. Locura de contenido.", img: testimonial2.url },
           ].map((t, i) => (
             <figure
               key={i}
@@ -338,17 +335,64 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ============ DESGLOSE DE VALOR (MÁS IMPORTANTE) ============ */}
+      {/* ============ SIN vs CON ============ */}
+      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+        <SectionTitle title="Tu vida SIN esto vs. Tu vida CON esto" />
+        <div className="grid gap-5 md:grid-cols-2">
+          <div
+            data-reveal
+            className="rounded-2xl border border-destructive/30 bg-destructive/5 p-6"
+          >
+            <h3 className="mb-4 text-xl font-black uppercase text-destructive/90">Sin la plataforma</h3>
+            <ul className="space-y-3 text-sm">
+              {[
+                "Horas perdidas buscando ejercicios sueltos en YouTube",
+                "Sensación de improvisar cada entrenamiento",
+                "Jugadores desmotivados y padres que dudan de ti",
+                "Estancamiento: los mismos ejercicios cada semana",
+                "Frustración de no crecer como entrenador",
+              ].map((t, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-destructive" />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div
+            data-reveal
+            className="rounded-2xl border-2 border-primary/50 bg-primary/5 p-6 shadow-glow"
+          >
+            <h3 className="mb-4 text-xl font-black uppercase text-primary">Con la plataforma</h3>
+            <ul className="space-y-3 text-sm">
+              {[
+                "Sesión perfecta lista en 30 segundos",
+                "Llegas al campo con seguridad de entrenador de élite",
+                "Jugadores que piden llegar al entrenamiento",
+                "Progresión clara semana a semana",
+                "Padres orgullosos y respeto profesional",
+              ].map((t, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ DESGLOSE DE VALOR + PRIMER CTA ============ */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-hero" />
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,oklch(0.78_0.22_142)_0,transparent_40%),radial-gradient(circle_at_80%_80%,oklch(0.82_0.15_85)_0,transparent_40%)]" />
         <div className="relative mx-auto max-w-4xl px-5">
           <div className="text-center" data-reveal>
             <div className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-black uppercase tracking-widest text-gold-foreground shadow-lg">
-              🎁 En Homenaje al Mundial
+              🎁 Todo esto por un solo pago
             </div>
             <h2 className="mt-5 text-3xl font-black uppercase sm:text-4xl md:text-5xl">
-              Todo Esto Está Incluido
+              Suma el valor real de lo que te llevas hoy
             </h2>
           </div>
 
@@ -374,22 +418,26 @@ function LandingPage() {
           </ul>
 
           <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-gold/40 bg-card/80 p-6 text-center shadow-elegant backdrop-blur sm:p-10" data-reveal>
-            <p className="text-sm uppercase tracking-widest text-muted-foreground">Valor total</p>
+            <p className="text-sm uppercase tracking-widest text-muted-foreground">Valor total real</p>
             <p className="mt-1 text-2xl font-black text-muted-foreground line-through">$92 USD</p>
             <p className="mt-6 text-sm uppercase tracking-widest text-gold">Hoy, en homenaje al Mundial</p>
             <p className="mt-1 text-6xl font-black leading-none text-primary sm:text-7xl md:text-8xl">
-              $15
+              $9,50
               <span className="text-2xl align-top">USD</span>
             </p>
             <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-1.5 text-xs font-black uppercase tracking-widest text-gold-foreground">
-              75% de descuento · Pago único · Acceso de por vida
+              <Clock className="h-3.5 w-3.5" />
+              Oferta por tiempo limitado · Pago único · De por vida
             </div>
-            <div className="mt-8">
-              <CTA className="w-full sm:w-auto">Quiero Mi Plataforma Completa</CTA>
+            <p className="mt-6 text-sm text-muted-foreground">
+              Menos de lo que cuesta un café con leche. Por TODA una carrera de entrenador con material profesional.
+            </p>
+            <div className="mt-6">
+              <CTA className="w-full sm:w-auto">Quiero Acceder Ahora por $9,50</CTA>
             </div>
             <p className="mt-4 text-xs text-muted-foreground">
               <ShieldCheck className="mr-1 inline h-4 w-4 text-primary" />
-              Pago 100% seguro · Acceso inmediato por e-mail
+              Pago 100% seguro · Acceso inmediato por e-mail · 7 días de garantía
             </p>
           </div>
         </div>
@@ -399,11 +447,11 @@ function LandingPage() {
       <section className="mx-auto max-w-4xl px-5 py-16 text-center md:py-20" data-reveal>
         <RefreshCw className="mx-auto h-10 w-10 text-primary" />
         <h2 className="mt-4 text-3xl font-black uppercase sm:text-4xl">
-          Actualizaciones constantes
+          Actualizaciones para siempre, sin pagar de nuevo
         </h2>
         <p className="mt-3 text-base text-muted-foreground sm:text-lg">
-          Añadimos nuevas sesiones, mejoras de diseño y nuevas funcionalidades sin costo adicional.
-          Tu plataforma crece contigo.
+          Cada mes añadimos nuevas sesiones, nuevos ejercicios y nuevas funciones — y a ti te llegan
+          automáticamente. Tu plataforma nunca envejece.
         </p>
       </section>
 
@@ -412,55 +460,11 @@ function LandingPage() {
         <div className="flex flex-col items-center gap-6 rounded-3xl border-2 border-primary/40 bg-card p-8 text-center sm:flex-row sm:text-left">
           <ShieldCheck className="h-16 w-16 shrink-0 text-primary" />
           <div>
-            <h3 className="text-2xl font-black uppercase">7 días de garantía incondicional</h3>
+            <h3 className="text-2xl font-black uppercase">7 días de garantía blindada</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Si sientes que no es para ti, te devolvemos tu dinero. Sin preguntas, sin complicaciones.
+              Entra, prueba, aplica. Si en 7 días sientes que no es para ti, escribes un e-mail y te
+              devolvemos hasta el último centavo. Sin preguntas. El riesgo es 100% nuestro.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ SIN vs CON ============ */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionTitle title="Sin la plataforma vs. Con la plataforma" />
-        <div className="grid gap-5 md:grid-cols-2">
-          <div
-            data-reveal
-            className="rounded-2xl border border-destructive/30 bg-destructive/5 p-6"
-          >
-            <h3 className="mb-4 text-xl font-black uppercase text-destructive/90">Sin la plataforma</h3>
-            <ul className="space-y-3 text-sm">
-              {[
-                "Ejercicios sueltos, sin orden",
-                "Sin progresión clara",
-                "Horas planificando cada sesión",
-                "Frustración semana tras semana",
-              ].map((t, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-destructive" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div
-            data-reveal
-            className="rounded-2xl border-2 border-primary/50 bg-primary/5 p-6 shadow-glow"
-          >
-            <h3 className="mb-4 text-xl font-black uppercase text-primary">Con la plataforma</h3>
-            <ul className="space-y-3 text-sm">
-              {[
-                "Todo organizado por posición y categoría",
-                "Progresión clara semana a semana",
-                "La plataforma hace el trabajo por ti",
-                "Resultados reales en el campo",
-              ].map((t, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -484,11 +488,11 @@ function LandingPage() {
             },
             {
               q: "¿Por qué el precio es tan bajo?",
-              a: "Porque es una promoción especial en homenaje a la Copa del Mundo, por tiempo limitado. Después vuelve al precio normal.",
+              a: "Porque es una promoción especial en homenaje a la Copa del Mundo, por tiempo limitado. Después vuelve al precio normal de $92.",
             },
             {
               q: "¿Cuánto tiempo tengo acceso?",
-              a: "Acceso de por vida con actualizaciones incluidas. Un solo pago y es tuyo para siempre.",
+              a: "Acceso de por vida con actualizaciones incluidas. Un solo pago de $9,50 y es tuyo para siempre.",
             },
             {
               q: "¿El pago es seguro?",
@@ -510,24 +514,31 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ============ CTA FINAL ============ */}
+      {/* ============ CTA FINAL (segundo y último botón) ============ */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-hero" />
         <div className="relative mx-auto max-w-3xl px-5 text-center" data-reveal>
           <Dumbbell className="mx-auto h-12 w-12 text-primary" />
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-black uppercase tracking-widest text-gold-foreground shadow-lg">
+            <Clock className="h-3.5 w-3.5" /> Oferta por tiempo limitado
+          </div>
           <h2 className="mt-4 text-4xl font-black uppercase leading-tight sm:text-5xl md:text-6xl">
-            $92 de valor por solo <span className="text-primary">$15</span>
+            $92 de valor por solo <span className="text-primary">$9,50</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground sm:text-lg">
-            Acceso inmediato, de por vida, con todas las actualizaciones incluidas.
-            En homenaje al Mundial.
+            Es literalmente la decisión más barata que vas a tomar este año — y probablemente la que
+            más va a transformar tu carrera como entrenador.
+          </p>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-foreground/80 sm:text-base">
+            <Sparkles className="mr-1 inline h-4 w-4 text-gold" />
+            Cuando la promoción termine, vuelve a $92. No hay segunda oportunidad.
           </p>
           <div className="mt-8">
-            <CTA>Quiero Mi Acceso Completo Ahora</CTA>
+            <CTA>Sí, Quiero Mi Acceso por $9,50</CTA>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
             <ShieldCheck className="mr-1 inline h-4 w-4 text-primary" />
-            7 días de garantía · Pago 100% seguro
+            7 días de garantía · Pago 100% seguro · Acceso inmediato
           </p>
         </div>
       </section>
@@ -543,7 +554,6 @@ function LandingPage() {
           para todos los usuarios.
         </p>
         <p className="mt-4">© {new Date().getFullYear()} — Todos los derechos reservados.</p>
-        {/* PIXEL_PLACEHOLDER — Facebook Pixel ya instalado globalmente en __root.tsx. Añade aquí scripts adicionales si necesitas. */}
       </footer>
     </div>
   );
