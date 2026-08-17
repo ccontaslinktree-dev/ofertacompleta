@@ -198,7 +198,8 @@ function LandingPage() {
           <CTA href={CHECKOUT_LINK_FULL}>Sí, Quiero la Plataforma Completa</CTA>
         </div>
       </section>
-      </section>
+
+
 
       {/* ============ SOLUCIÓN ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
