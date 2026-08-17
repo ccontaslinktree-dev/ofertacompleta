@@ -520,7 +520,7 @@ function LandingPage() {
             },
             {
               q: "¿Cuánto tiempo tengo acceso?",
-              a: "Acceso de por vida con actualizaciones incluidas. Un solo pago de $9,50 y es tuyo para siempre.",
+              a: "Acceso de por vida con todas las actualizaciones futuras incluidas. Un solo pago y es tuyo para siempre.",
             },
             {
               q: "¿El pago es seguro?",
