@@ -199,7 +199,7 @@ function LandingPage() {
       {/* ============ SOLUCIÓN ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <SectionTitle kicker="Todo en un solo producto" title="5 entregables premium · 1 sola plataforma" />
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
             {
               icon: Library,
@@ -214,9 +214,15 @@ function LandingPage() {
               img: featureExercises,
             },
             {
+              icon: Sparkles,
+              title: "Videos Didácticos Integrados",
+              text: "Cada ejercicio incluye su video explicativo. Ves la técnica exacta y la organización del campo directo en tu plataforma.",
+              img: coverAsset.url,
+            },
+            {
               icon: Trophy,
               title: "Fútbol 360° Completo",
-              text: "Fútbol femenino + infantil + preparación física. Tres paquetes premium incluidos SIN pagar extra.",
+              text: "Fútbol femenino + infantil + preparación física. Todo incluido en tu área de miembros.",
               img: feature360,
             },
           ].map((c, i) => (
