@@ -195,7 +195,14 @@ function LandingPage() {
           Hoy eso termina.
         </p>
         <div className="mt-8" data-reveal>
-          <CTA href={CHECKOUT_LINK_FULL}>Sí, Quiero la Plataforma Completa</CTA>
+          <a
+            href="#oferta"
+            className="group relative inline-flex items-center justify-center gap-2 rounded-2xl bg-primary-gradient px-8 py-5 text-base font-black uppercase tracking-wide text-primary-foreground shadow-glow transition-transform duration-200 hover:scale-[1.02] active:scale-[0.99] sm:text-lg"
+          >
+            <Flame className="h-5 w-5" />
+            Ver Oferta Plataforma Completa
+            <span className="absolute inset-0 -z-10 rounded-2xl bg-primary-gradient blur-xl opacity-40 group-hover:opacity-70 transition-opacity" />
+          </a>
         </div>
       </section>
 
@@ -400,7 +407,7 @@ function LandingPage() {
       </section>
 
       {/* ============ DESGLOSE DE VALOR + OFERTA DOBLE ============ */}
-      <section className="relative overflow-hidden py-20 md:py-28">
+      <section id="oferta" className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-hero" />
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,oklch(0.78_0.22_142)_0,transparent_40%),radial-gradient(circle_at_80%_80%,oklch(0.82_0.15_85)_0,transparent_40%)]" />
         <div className="relative mx-auto max-w-6xl px-5">
