@@ -28,7 +28,8 @@ import player2 from "@/assets/player-2.jpg.asset.json";
 import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
 import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 
-const CHECKOUT_LINK = "https://pay.hotmart.com/D106820400M?checkoutMode=10";
+const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
+const CHECKOUT_LINK_BASIC = "https://pay.kiwify.com/eQoQd0Y";
 
 export const Route = createFileRoute("/")({
   head: () => ({
