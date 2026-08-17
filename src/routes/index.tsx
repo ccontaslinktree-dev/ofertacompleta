@@ -407,7 +407,7 @@ function LandingPage() {
       </section>
 
       {/* ============ DESGLOSE DE VALOR + OFERTA DOBLE ============ */}
-      <section className="relative overflow-hidden py-20 md:py-28">
+      <section id="oferta" className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-hero" />
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,oklch(0.78_0.22_142)_0,transparent_40%),radial-gradient(circle_at_80%_80%,oklch(0.82_0.15_85)_0,transparent_40%)]" />
         <div className="relative mx-auto max-w-6xl px-5">
