@@ -34,17 +34,17 @@ const CHECKOUT_LINK_BASIC = "https://pay.kiwify.com/eQoQd0Y";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Plataforma Completa de Entrenamiento de Fútbol · Oferta Mundial $9,50" },
+      { title: "Plataforma Completa de Entrenamiento de Fútbol · 5 Entregables en 1" },
       {
         name: "description",
         content:
-          "TODO en un solo producto: +250 sesiones, +2.000 ejercicios y Fútbol 360° completo. Hoy por solo $9,50 USD — oferta por tiempo limitado en homenaje al Mundial.",
+          "Accede a nuestra plataforma completa: +250 sesiones, +2.000 ejercicios con videos didácticos y Fútbol 360°. Desde solo $5,00 USD.",
       },
-      { property: "og:title", content: "Plataforma Completa de Entrenamiento de Fútbol · $9,50" },
+      { property: "og:title", content: "Plataforma Completa de Entrenamiento de Fútbol" },
       {
         property: "og:description",
         content:
-          "TODO en un solo producto: +250 sesiones, +2.000 ejercicios y Fútbol 360°. Hoy $9,50 USD — por tiempo limitado.",
+          "Plataforma completa con área de miembros, videos y biblioteca de +2.000 ejercicios. Oferta desde $5,00 USD.",
       },
       { property: "og:image", content: coverAsset.url },
       { name: "twitter:image", content: coverAsset.url },
