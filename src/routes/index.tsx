@@ -562,7 +562,7 @@ function LandingPage() {
             Cuando la promoción termine, vuelve a $92. No hay segunda oportunidad.
           </p>
           <div className="mt-8">
-            <CTA>Sí, Quiero Mi Acceso por $9,50</CTA>
+            <CTA href={CHECKOUT_LINK_FULL}>Sí, Quiero Mi Acceso por $5,50</CTA>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
             <ShieldCheck className="mr-1 inline h-4 w-4 text-primary" />
