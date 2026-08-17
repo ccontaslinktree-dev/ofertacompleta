@@ -301,44 +301,54 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ============ TESTIMONIOS ============ */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+      {/* ============ TESTIMONIOS (Carrusel Infinito) ============ */}
+      <section className="overflow-hidden py-16 md:py-24">
         <SectionTitle kicker="Testimonios reales" title="Entrenadores que ya dejaron de improvisar" />
-        <div className="grid gap-5 sm:grid-cols-2">
-          {[
-            { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
-            { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
-
-          ].map((t, i) => (
-            <figure
-              key={i}
-              data-reveal
-              className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-elegant"
-            >
-              <div className="mb-3 flex items-center gap-1 text-gold">
-                {Array.from({ length: 5 }).map((_, k) => (
-                  <Star key={k} className="h-4 w-4 fill-current" />
-                ))}
-              </div>
-              <blockquote className="text-sm leading-relaxed text-foreground/90">
-                “{t.t}”
-              </blockquote>
-              <figcaption className="mt-4 flex items-center gap-3">
-                <img
-                  src={t.img}
-                  alt={t.n}
-                  width={44}
-                  height={44}
-                  loading="lazy"
-                  className="h-11 w-11 shrink-0 rounded-full object-cover border border-border"
-                />
-                <div>
-                  <div className="text-sm font-bold">{t.n}</div>
-                  <div className="text-xs text-muted-foreground">{t.r}</div>
+        <div className="relative mt-10">
+          <div className="group flex w-fit gap-5 animate-marquee hover:pause-marquee">
+            {[
+              { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
+              { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
+              { n: "Ricardo L.", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: player1.url },
+              { n: "Marcos P.", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: player2.url },
+              { n: "Diego S.", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: testimonial1.url },
+              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los 2.000 ejercicios son una mina de oro para cualquier categoría.", img: testimonial2.url },
+              { n: "Carlos M. (Bis)", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
+              { n: "Andrés G. (Bis)", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
+              { n: "Ricardo L. (Bis)", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: player1.url },
+              { n: "Marcos P. (Bis)", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: player2.url },
+              { n: "Diego S. (Bis)", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: testimonial1.url },
+              { n: "Javier V. (Bis)", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los 2.000 ejercicios son una mina de oro para cualquier categoría.", img: testimonial2.url },
+            ].map((t, i) => (
+              <figure
+                key={i}
+                className="flex w-[320px] shrink-0 flex-col rounded-2xl border border-border bg-card p-6 shadow-elegant"
+              >
+                <div className="mb-3 flex items-center gap-1 text-gold">
+                  {Array.from({ length: 5 }).map((_, k) => (
+                    <Star key={k} className="h-4 w-4 fill-current" />
+                  ))}
                 </div>
-              </figcaption>
-            </figure>
-          ))}
+                <blockquote className="text-sm leading-relaxed text-foreground/90">
+                  “{t.t}”
+                </blockquote>
+                <figcaption className="mt-4 flex items-center gap-3">
+                  <img
+                    src={t.img}
+                    alt={t.n}
+                    width={44}
+                    height={44}
+                    loading="lazy"
+                    className="h-11 w-11 shrink-0 rounded-full object-cover border border-border"
+                  />
+                  <div>
+                    <div className="text-sm font-bold">{t.n}</div>
+                    <div className="text-xs text-muted-foreground">{t.r}</div>
+                  </div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
