@@ -551,7 +551,7 @@ function LandingPage() {
             <Clock className="h-3.5 w-3.5" /> Oferta por tiempo limitado
           </div>
           <h2 className="mt-4 text-4xl font-black uppercase leading-tight sm:text-5xl md:text-6xl">
-            $92 de valor por solo <span className="text-primary">$9,50</span>
+            Tu carrera merece este <span className="text-primary">salto de nivel</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground sm:text-lg">
             Es literalmente la decisión más barata que vas a tomar este año — y probablemente la que
