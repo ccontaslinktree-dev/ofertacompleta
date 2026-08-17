@@ -516,7 +516,7 @@ function LandingPage() {
             },
             {
               q: "¿Por qué el precio es tan bajo?",
-              a: "Porque es una promoción especial en homenaje a la Copa del Mundo, por tiempo limitado. Después vuelve al precio normal de $92.",
+              a: "Porque es un precio de lanzamiento exclusivo para los primeros usuarios de la plataforma actualizada con video. Queremos que los entrenadores la prueben y vean el salto de calidad inmediato.",
             },
             {
               q: "¿Cuánto tiempo tengo acceso?",
