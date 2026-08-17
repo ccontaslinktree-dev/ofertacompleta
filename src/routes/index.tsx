@@ -129,21 +129,19 @@ function LandingPage() {
         <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-10 sm:pt-14 md:pb-20">
           <div className="mx-auto max-w-3xl text-center" data-reveal>
             <div className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-black uppercase tracking-widest text-gold-foreground shadow-lg sm:text-sm">
-              🔥 Homenaje al Mundial · Oferta por Tiempo Limitado ⚽
+              🔥 5 Entregables en 1 Sola Plataforma ⚽
             </div>
             <h1 className="mt-6 text-4xl font-black uppercase leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl">
-              5 Productos en <span className="text-primary">1 Sola Plataforma</span>
-              <br />
               Para Entrenar Fútbol como un <span className="text-primary">Profesional</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg md:text-xl">
-              +250 sesiones interactivas · +2.000 ejercicios · Fútbol femenino, infantil y preparación física.
+              +250 sesiones interactivas · +2.000 ejercicios · Videos didácticos de cada ejercicio · Fútbol femenino, infantil y preparación física.
               <br />
-              <strong className="text-foreground">Todo junto. Un solo pago. Acceso de por vida.</strong>
+              <strong className="text-foreground">Todo en tu plataforma personal, con acceso de por vida.</strong>
             </p>
             <p className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-sm font-bold text-foreground">
               <Clock className="h-4 w-4 text-gold" />
-              Antes $92 USD · Hoy solo <span className="text-primary">$9,50 USD</span>
+              Antes $92 USD · Hoy desde <span className="text-primary">$5,00 USD</span>
             </p>
           </div>
         </div>
