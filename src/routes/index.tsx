@@ -194,7 +194,12 @@ function LandingPage() {
         <p className="mx-auto mt-6 max-w-2xl text-lg font-bold text-primary sm:text-xl" data-reveal>
           Hoy eso termina.
         </p>
+        <div className="mt-8" data-reveal>
+          <CTA href={CHECKOUT_LINK_FULL}>Sí, Quiero la Plataforma Completa</CTA>
+        </div>
       </section>
+
+
 
       {/* ============ SOLUCIÓN ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
