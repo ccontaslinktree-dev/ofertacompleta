@@ -278,9 +278,9 @@ function LandingPage() {
         <SectionTitle kicker="Cómo funciona" title="En 3 minutos ya estás dentro" />
         <div className="grid gap-6 md:grid-cols-3">
           {[
-            { icon: Smartphone, t: "Accede desde donde quieras", d: "Móvil, tablet u ordenador. Todo online, sin instalar nada." },
+            { icon: Smartphone, t: "Accede desde donde quieras", d: "Móvil, tablet u ordenador. Todo online en tu plataforma personal." },
             { icon: LayoutGrid, t: "Filtra por posición, edad o categoría", d: "Encuentra la sesión perfecta en segundos, sin perder tiempo." },
-            { icon: Zap, t: "Copia, aplica y sorprende", d: "Sales al campo con material de nivel profesional. Hoy mismo." },
+            { icon: Zap, t: "Mira el video y aplica", d: "Mira el video, copia la técnica y sales al campo con seguridad profesional." },
           ].map((s, i) => (
             <div key={i} data-reveal className="rounded-2xl border border-border bg-card p-6">
               <div className="flex items-center gap-3">
