@@ -384,60 +384,86 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ============ DESGLOSE DE VALOR + PRIMER CTA ============ */}
+      {/* ============ DESGLOSE DE VALOR + OFERTA DOBLE ============ */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-hero" />
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,oklch(0.78_0.22_142)_0,transparent_40%),radial-gradient(circle_at_80%_80%,oklch(0.82_0.15_85)_0,transparent_40%)]" />
-        <div className="relative mx-auto max-w-4xl px-5">
+        <div className="relative mx-auto max-w-6xl px-5">
           <div className="text-center" data-reveal>
             <div className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-black uppercase tracking-widest text-gold-foreground shadow-lg">
-              🎁 Todo esto por un solo pago
+              🎁 Elige tu plan de acceso
             </div>
             <h2 className="mt-5 text-3xl font-black uppercase sm:text-4xl md:text-5xl">
-              Suma el valor real de lo que te llevas hoy
+              Plataforma Web Actualizada con Video
             </h2>
           </div>
 
-          <ul className="mx-auto mt-10 max-w-2xl space-y-3" data-reveal>
-            {[
-              ["Plataforma con +250 Sesiones de Entrenamiento", "$19"],
-              ["Material Completo de +2.000 Ejercicios", "$25"],
-              ["Fútbol 360° — Entrenamientos Femeninos", "$16"],
-              ["Fútbol 360° — Entrenamientos Infantiles", "$16"],
-              ["Fútbol 360° — Acondicionamiento Físico", "$16"],
-            ].map(([name, price], i) => (
-              <li
-                key={i}
-                className="flex items-center justify-between gap-4 rounded-xl border border-primary/20 bg-card/60 px-5 py-4 backdrop-blur"
-              >
-                <div className="flex min-w-0 items-center gap-3">
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
-                  <span className="truncate text-sm font-semibold sm:text-base">{name}</span>
-                </div>
-                <span className="shrink-0 font-black text-gold">Valor {price}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:max-w-4xl lg:mx-auto">
+            {/* PAQUETE COMPLETO */}
+            <div className="relative flex flex-col rounded-3xl border-2 border-primary bg-card p-8 shadow-glow" data-reveal>
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-black uppercase tracking-widest text-primary-foreground">
+                Más vendido
+              </div>
+              <h3 className="text-2xl font-black uppercase">Paquete Completo</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Todo el contenido premium incluido.</p>
+              
+              <ul className="mt-8 space-y-4 flex-1">
+                {[
+                  ["Plataforma Web Completa (área de miembros)", "$11,90"],
+                  ["+250 Sesiones de Entrenamiento", "$9"],
+                  ["+2.000 Ejercicios organizados", "$9"],
+                  ["Videos didácticos de cada ejercicio", "$10"],
+                  ["Fútbol 360° completo (femenino, infantil, físico)", "$5"],
+                ].map(([item, price], i) => (
+                  <li key={i} className="flex items-center justify-between gap-3 text-sm">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-primary" />
+                      <span>{item}</span>
+                    </div>
+                    <span className="font-bold text-gold shrink-0">{price}</span>
+                  </li>
+                ))}
+              </ul>
 
-          <div className="mx-auto mt-10 max-w-2xl rounded-3xl border border-gold/40 bg-card/80 p-6 text-center shadow-elegant backdrop-blur sm:p-10" data-reveal>
-            <p className="text-sm uppercase tracking-widest text-muted-foreground">Valor total real</p>
-            <p className="mt-1 text-2xl font-black text-muted-foreground line-through">$92 USD</p>
-            <p className="mt-6 text-sm uppercase tracking-widest text-gold">Hoy, en homenaje al Mundial</p>
-            <p className="mt-1 text-6xl font-black leading-none text-primary sm:text-7xl md:text-8xl">
-              $9,50
-              <span className="text-2xl align-top">USD</span>
-            </p>
-            <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-1.5 text-xs font-black uppercase tracking-widest text-gold-foreground">
-              <Clock className="h-3.5 w-3.5" />
-              Oferta por tiempo limitado · Pago único · De por vida
+              <div className="mt-8 border-t border-border pt-6 text-center">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">Valor total: $44,90 USD</p>
+                <p className="mt-2 text-5xl font-black text-primary">$5,50<span className="text-xl">USD</span></p>
+                <CTA href={CHECKOUT_LINK_FULL} className="mt-6 w-full">Quiero el Paquete Completo por $5,50</CTA>
+              </div>
             </div>
-            <p className="mt-6 text-sm text-muted-foreground">
-              Menos de lo que cuesta un café con leche. Por TODA una carrera de entrenador con material profesional.
-            </p>
-            <div className="mt-6">
-              <CTA className="w-full sm:w-auto">Quiero Acceder Ahora por $9,50</CTA>
+
+            {/* PAQUETE BÁSICO */}
+            <div className="flex flex-col rounded-3xl border border-border bg-card p-8 shadow-elegant" data-reveal>
+              <h3 className="text-2xl font-black uppercase text-muted-foreground">Paquete Básico</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Lo esencial para empezar.</p>
+              
+              <ul className="mt-8 space-y-4 flex-1">
+                {[
+                  ["Plataforma Web: Módulo Fútbol Femenino", "$9"],
+                  ["Plataforma Web: Módulo Fútbol Infantil", "$9"],
+                  ["Acondicionamiento Físico", "$9"],
+                  ["Diagramas de campo con pasos numerados", "$7,90"],
+                ].map(([item, price], i) => (
+                  <li key={i} className="flex items-center justify-between gap-3 text-sm">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-primary/60" />
+                      <span>{item}</span>
+                    </div>
+                    <span className="font-bold text-gold/80 shrink-0">{price}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 border-t border-border pt-6 text-center">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">Valor total: $34,90 USD</p>
+                <p className="mt-2 text-5xl font-black text-muted-foreground">$5,00<span className="text-xl">USD</span></p>
+                <CTA href={CHECKOUT_LINK_BASIC} className="mt-6 w-full bg-muted text-muted-foreground border-border hover:bg-muted/80">Elegir Paquete Básico por $5,00</CTA>
+              </div>
             </div>
-            <p className="mt-4 text-xs text-muted-foreground">
+          </div>
+          
+          <div className="mt-10 text-center">
+            <p className="text-xs text-muted-foreground">
               <ShieldCheck className="mr-1 inline h-4 w-4 text-primary" />
               Pago 100% seguro · Acceso inmediato por e-mail · 7 días de garantía
             </p>
