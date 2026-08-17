@@ -524,7 +524,7 @@ function LandingPage() {
             },
             {
               q: "¿El pago es seguro?",
-              a: "100% seguro. Procesamos los pagos a través de Hotmart, una de las plataformas más confiables de Latinoamérica.",
+              a: "100% seguro. Procesamos los pagos a través de Kiwify, una de las plataformas de pagos más seguras y confiables.",
             },
           ].map((f, i) => (
             <details
