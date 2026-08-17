@@ -84,10 +84,10 @@ function trackLead() {
   }
 }
 
-function CTA({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function CTA({ children, className = "", href = CHECKOUT_LINK_FULL }: { children: React.ReactNode; className?: string; href?: string }) {
   return (
     <a
-      href={CHECKOUT_LINK}
+      href={href}
       onClick={trackLead}
       target="_blank"
       rel="noopener noreferrer"
