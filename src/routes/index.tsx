@@ -488,10 +488,10 @@ function LandingPage() {
         <SectionTitle kicker="En el campo" title="Imagina tu equipo entrenando así la próxima semana" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { src: trainingField1, alt: "Sesión de entrenamiento en campo" },
-            { src: trainingField4, alt: "Control técnico profesional" },
-            { src: trainingField5, alt: "Duelo táctico en campo" },
-            { src: trainingField6, alt: "Biblioteca de ejercicios prácticos" },
+            { src: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200", alt: "Sesión de entrenamiento en campo" },
+            { src: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200", alt: "Control técnico profesional" },
+            { src: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200", alt: "Duelo táctico en campo" },
+            { src: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200", alt: "Biblioteca de ejercicios prácticos" },
           ].map((it, i) => (
             <img
               key={i}
@@ -536,12 +536,12 @@ function LandingPage() {
         <div className="relative mt-10">
           <div className="group flex w-fit gap-5 animate-marquee hover:pause-marquee">
             {[
-              { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
-              { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
-              { n: "Ricardo L.", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: player1.url },
-              { n: "Marcos P.", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: player2.url },
-              { n: "Diego S.", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: testimonial1.url },
-              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los ejercicios son una mina de oro para cualquier categoría.", img: testimonial2.url },
+              { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" },
+              { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" },
+              { n: "Ricardo L.", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" },
+              { n: "Marcos P.", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" },
+              { n: "Diego S.", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" },
+              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los ejercicios son una mina de oro para cualquier categoría.", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" },
             ].map((t, i) => (
               <figure
                 key={i}
