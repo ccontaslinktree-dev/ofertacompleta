@@ -469,7 +469,7 @@ function LandingPage() {
                 ))}
               </div>
               <div className="text-sm font-bold text-foreground">
-                Únete a +2.146 que ya confían en el método
+                Únete a los que ya confían en el método
               </div>
             </div>
           </div>
