@@ -247,8 +247,8 @@ function LandingPage() {
               <div className="text-xs text-muted-foreground">Copia cada movimiento</div>
             </div>
             <div className="rounded-xl border border-border bg-background p-4">
-              <div className="font-black text-primary">120+ Videos</div>
-              <div className="text-xs text-muted-foreground">Organizados por nivel</div>
+              <div className="font-black text-primary">Materias en Video</div>
+              <div className="text-xs text-muted-foreground">Plataforma Completa</div>
             </div>
           </div>
         </div>
