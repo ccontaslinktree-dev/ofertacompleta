@@ -146,7 +146,7 @@ function LandingPage() {
         <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-10 sm:pt-14 md:pb-20">
           <div className="mx-auto max-w-4xl text-center" data-reveal>
             <div className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-black uppercase tracking-widest text-gold-foreground shadow-lg sm:text-sm">
-              🔥 +2.146 jugadores y entrenadores ya evolucionando ⚽
+              🔥 Jugadores y entrenadores ya evolucionando ⚽
             </div>
             <h1 className="mt-6 text-4xl font-black uppercase leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl">
               DESCUBRE EL MÉTODO PROFESIONAL PARA <span className="text-primary">DEJAR DE IMPROVISAR</span> Y EVOLUCIONAR MÁS RÁPIDO
