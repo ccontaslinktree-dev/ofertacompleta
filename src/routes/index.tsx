@@ -27,6 +27,7 @@ import player1 from "@/assets/player-1.jpg.asset.json";
 import player2 from "@/assets/player-2.jpg.asset.json";
 import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
 import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
+import coachAsset from "@/assets/coach.png.asset.json";
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
 const CHECKOUT_LINK_BASIC = "https://pay.kiwify.com/eQoQd0Y";
@@ -34,20 +35,20 @@ const CHECKOUT_LINK_BASIC = "https://pay.kiwify.com/eQoQd0Y";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Plataforma Completa de Entrenamiento de Fútbol · 5 Entregables en 1" },
+      { title: "Plataforma Completa de Entrenamiento de Fútbol · Deja de Improvisar" },
       {
         name: "description",
         content:
-          "Accede a nuestra plataforma completa: +250 sesiones, +2.000 ejercicios con videos didácticos y Fútbol 360°. Desde solo $5,00 USD.",
+          "Accede a nuestra plataforma profesional: +250 sesiones y +2.000 ejercicios con videos didácticos integrados. Mismo método usado por profesionales.",
       },
-      { property: "og:title", content: "Plataforma Completa de Entrenamiento de Fútbol" },
+      { property: "og:title", content: "Entrena con Método: Plataforma de Fútbol Profesional" },
       {
         property: "og:description",
         content:
-          "Plataforma completa con área de miembros, videos y biblioteca de +2.000 ejercicios. Oferta desde $5,00 USD.",
+          "Plataforma completa con área de miembros, videos y biblioteca de +2.000 ejercicios. Oferta de lanzamiento.",
       },
-      { property: "og:image", content: coverAsset.url },
-      { name: "twitter:image", content: coverAsset.url },
+      { property: "og:image", content: coachAsset.url },
+      { name: "twitter:image", content: coachAsset.url },
     ],
   }),
   component: LandingPage,
@@ -127,19 +128,33 @@ function LandingPage() {
       <header className="relative overflow-hidden bg-hero">
         <div className="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(oklch(0.78_0.22_142/0.15)_1px,transparent_1px),linear-gradient(90deg,oklch(0.78_0.22_142/0.15)_1px,transparent_1px)] [background-size:60px_60px]" />
         <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-10 sm:pt-14 md:pb-20">
-          <div className="mx-auto max-w-3xl text-center" data-reveal>
+          <div className="mx-auto max-w-4xl text-center" data-reveal>
             <div className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-black uppercase tracking-widest text-gold-foreground shadow-lg sm:text-sm">
-              🔥 5 Entregables en 1 Sola Plataforma ⚽
+              🔥 +2.146 jugadores y entrenadores ya evolucionando ⚽
             </div>
             <h1 className="mt-6 text-4xl font-black uppercase leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl">
-              Para Entrenar Fútbol como un <span className="text-primary">Profesional</span>
+              DESCUBRE EL MÉTODO PROFESIONAL PARA <span className="text-primary">DEJAR DE IMPROVISAR</span> Y EVOLUCIONAR MÁS RÁPIDO
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg md:text-xl">
-              +250 sesiones interactivas · +2.000 ejercicios · Videos didácticos de cada ejercicio · Fútbol femenino, infantil y preparación física.
+            <p className="mx-auto mt-6 max-w-3xl text-base text-muted-foreground sm:text-lg md:text-xl">
+              Accede a una <strong className="text-foreground">Plataforma Completa</strong> de entrenamiento profesional: biblioteca organizada con +250 sesiones y +2.000 ejercicios, más materiales en video integrados que te muestran exactamente cómo ejecutar cada ejercicio. 
               <br />
-              <strong className="text-foreground">Todo en tu plataforma personal, con acceso de por vida.</strong>
+              <strong className="text-foreground">Un solo pago, acceso de por vida.</strong>
             </p>
-            <p className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-sm font-bold text-foreground">
+            <div className="mt-8 flex flex-wrap justify-center gap-6 text-center">
+              <div>
+                <div className="text-2xl font-black text-primary">+250</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">sesiones listas</div>
+              </div>
+              <div className="border-x border-border px-6">
+                <div className="text-2xl font-black text-primary">+2.000</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">ejercicios ilustrados</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-primary">5 min</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">para armar tu sesión</div>
+              </div>
+            </div>
+            <p className="mx-auto mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-sm font-bold text-foreground">
               <Clock className="h-4 w-4 text-gold" />
               Antes $92 USD · Hoy desde <span className="text-primary">$5,00 USD</span>
             </p>
