@@ -4,21 +4,20 @@ import {
   Flame,
   Zap,
   CheckCircle2,
-   XCircle,
-   Check,
-   Sparkles,
+  XCircle,
+  Check,
+  Sparkles,
   RefreshCw,
   Smartphone,
   Trophy,
   Dumbbell,
-   Library,
-   ShieldCheck,
-   LayoutGrid,
+  Library,
+  ShieldCheck,
+  LayoutGrid,
   Star,
   Clock,
-   AlertTriangle,
-   ShieldCheck as ShieldIcon,
- } from "lucide-react";
+  AlertTriangle,
+} from "lucide-react";
 
 import featureSessions from "@/assets/feature-sessions.jpg";
 import featureExercises from "@/assets/feature-exercises.jpg";
