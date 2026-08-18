@@ -372,7 +372,7 @@ function LandingPage() {
               <h3 className="text-xl font-black uppercase">{c.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{c.text}</p>
               <img
-                src={typeof c.img === 'string' ? c.img : (c.img as any)?.url || ""}
+                src={typeof c.img === 'string' ? c.img : (c.img as any).url}
                 alt={c.title}
                 width={1200}
                 height={900}
@@ -496,7 +496,7 @@ function LandingPage() {
             <img
               key={i}
               data-reveal
-              src={typeof it.src === 'string' ? it.src : (it.src as any)?.url || ""}
+              src={typeof it.src === 'string' ? it.src : (it.src as any).url}
               alt={it.alt}
               width={1200}
               height={900}
@@ -557,7 +557,7 @@ function LandingPage() {
                 </blockquote>
                 <figcaption className="mt-4 flex items-center gap-3">
                   <img
-                    src={typeof t.img === 'string' ? t.img : (t.img as any)?.url || ""}
+                    src={typeof t.img === 'string' ? t.img : (t.img as any).url}
                     alt={t.n}
                     width={44}
                     height={44}
