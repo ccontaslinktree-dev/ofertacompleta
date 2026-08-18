@@ -29,12 +29,12 @@ const player2 = { url: "https://images.unsplash.com/photo-1550889414-8224347745e
 const testimonial1 = { url: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=400" };
 const testimonial2 = { url: "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=400" };
 import coachAsset from "@/assets/coach.png.asset.json";
-const lateralesImg = featureSessions;
-const defensaImg = featureExercises;
-const mediocampistasImg = feature360;
-const porterosImg = featureSessions;
-const fisicoImg = featureExercises;
-const infantilImg = feature360;
+const lateralesImg = strikeImg;
+const defensaImg = goalieImg;
+const mediocampistasImg = technicalControlImg;
+const porterosImg = femaleSoccerImg;
+const fisicoImg = youthTrainingImg;
+const infantilImg = ballDetailImg;
 
 // Nuevos activos visuales para evitar repeticiones (Simulados con assets existentes mientras se generan nuevos)
 const strikeImg = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
