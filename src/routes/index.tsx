@@ -559,49 +559,101 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ============ SIN vs CON ============ */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionTitle title="Tu vida SIN esto vs. Tu vida CON esto" />
-        <div className="grid gap-5 md:grid-cols-2">
-          <div
-            data-reveal
-            className="rounded-2xl border border-destructive/30 bg-destructive/5 p-6"
-          >
-            <h3 className="mb-4 text-xl font-black uppercase text-destructive/90">Sin la plataforma</h3>
-            <ul className="space-y-3 text-sm">
-              {[
-                "Horas perdidas buscando ejercicios sueltos en YouTube",
-                "Sensación de improvisar cada entrenamiento",
-                "Jugadores desmotivados y padres que dudan de ti",
-                "Estancamiento: los mismos ejercicios cada semana",
-                "Frustración de no crecer como entrenador",
-              ].map((t, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-destructive" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
+      {/* ============ SIN VS CON ============ */}
+      <section className="bg-card px-5 py-16 md:py-24">
+        <div className="mx-auto max-w-5xl">
+          <SectionTitle kicker="La diferencia es clara" title="¿CÓMO SERÁ TU PRÓXIMA SEMANA?" />
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {/* SIN MÉTODO */}
+            <div className="rounded-3xl border border-destructive/20 bg-background p-8 shadow-elegant" data-reveal>
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-destructive/10 text-destructive">
+                <XCircle className="h-6 w-6" />
+              </div>
+              <h3 className="text-2xl font-black uppercase text-destructive">Sin el Método</h3>
+              <ul className="mt-6 space-y-4">
+                {[
+                  "Llegas al campo sin saber qué hacer hoy.",
+                  "Pierdes horas buscando en YouTube y no encuentras nada útil.",
+                  "Tus jugadores se aburren repitiendo siempre lo mismo.",
+                  "Te sientes estancado y sin herramientas para avanzar.",
+                  "Improvisas y rezas para que el entrenamiento salga bien.",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 opacity-50" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* CON MÉTODO */}
+            <div className="rounded-3xl border border-primary/20 bg-background p-8 shadow-glow" data-reveal>
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <CheckCircle2 className="h-6 w-6" />
+              </div>
+              <h3 className="text-2xl font-black uppercase text-primary">Con la Plataforma</h3>
+              <ul className="mt-6 space-y-4">
+                {[
+                  "Sesión lista en 5 minutos: solo eliges y aplicas.",
+                  "Videos didácticos que te muestran la técnica exacta.",
+                  "Jugadores motivados con ejercicios de élite.",
+                  "Evolución constante y reconocimiento profesional.",
+                  "Seguridad total de estar usando un método probado.",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm font-medium">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div
-            data-reveal
-            className="rounded-2xl border-2 border-primary/50 bg-primary/5 p-6 shadow-glow"
-          >
-            <h3 className="mb-4 text-xl font-black uppercase text-primary">Con la plataforma</h3>
-            <ul className="space-y-3 text-sm">
-              {[
-                "Sesión perfecta lista en 30 segundos",
-                "Llegas al campo con seguridad de entrenador de élite",
-                "Jugadores que piden llegar al entrenamiento",
-                "Progresión clara semana a semana",
-                "Padres orgullosos y respeto profesional",
-              ].map((t, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
+        </div>
+      </section>
+
+      {/* ============ QUIEN SOY (Coach Martínez) ============ */}
+      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          <div className="relative" data-reveal>
+            <div className="absolute -inset-4 rounded-3xl bg-gold/5 blur-2xl" />
+            <img
+              src={coachAsset.url}
+              alt="Coach Martínez"
+              className="relative rounded-3xl border border-border bg-card shadow-elegant"
+            />
+            <div className="absolute -bottom-6 -right-6 rounded-2xl bg-primary px-6 py-4 shadow-glow">
+              <div className="text-2xl font-black text-primary-foreground">+15 AÑOS</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-primary-foreground/80">de experiencia</div>
+            </div>
+          </div>
+          <div data-reveal>
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
+              Sobre el creador
+            </div>
+            <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl md:text-5xl">
+              SOY EL <span className="text-primary">COACH MARTÍNEZ</span>
+            </h2>
+            <div className="mt-6 space-y-4 text-base text-muted-foreground sm:text-lg">
+              <p>
+                He pasado más de una década en los campos, desde categorías base hasta el alto rendimiento. Sé exactamente lo que es llegar a un entrenamiento con la mente en blanco, sintiendo que le estás fallando a tus jugadores.
+              </p>
+              <p>
+                Por eso creé esta plataforma. No es solo una lista de ejercicios; es el sistema organizado que yo mismo uso para dejar de improvisar. 
+              </p>
+              <p>
+                Mi misión es democratizar el entrenamiento de élite para que cualquier jugador o entrenador, sin importar su nivel, tenga acceso a la misma metodología que usan los profesionales.
+              </p>
+            </div>
+            <div className="mt-8 flex items-center gap-4">
+              <div className="flex -space-x-3">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="h-10 w-10 rounded-full border-2 border-background bg-muted shadow-sm" />
+                ))}
+              </div>
+              <div className="text-sm font-bold text-foreground">
+                Únete a +2.146 que ya confían en el método
+              </div>
+            </div>
           </div>
         </div>
       </section>
