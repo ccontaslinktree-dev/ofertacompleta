@@ -24,10 +24,10 @@ import featureExercises from "@/assets/feature-exercises.jpg";
 import feature360 from "@/assets/feature-360.jpg";
 import videoAsset from "@/assets/video-demo.mp4.asset.json";
 import coverAsset from "@/assets/cover.png.asset.json";
-const player1 = { url: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=400" };
-const player2 = { url: "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=400" };
-const testimonial1 = { url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=400" };
-const testimonial2 = { url: "https://images.unsplash.com/photo-1550889414-8224347745ee?auto=format&fit=crop&q=80&w=400" };
+const player1 = { url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=400" };
+const player2 = { url: "https://images.unsplash.com/photo-1550889414-8224347745ee?auto=format&fit=crop&q=80&w=400" };
+const testimonial1 = { url: "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=400" };
+const testimonial2 = { url: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=400" };
 import coachAsset from "@/assets/coach.png.asset.json";
 
 const trainingField1 = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
