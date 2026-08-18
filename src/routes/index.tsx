@@ -24,32 +24,38 @@ import featureExercises from "@/assets/feature-exercises.jpg";
 import feature360 from "@/assets/feature-360.jpg";
 import videoAsset from "@/assets/video-demo.mp4.asset.json";
 import coverAsset from "@/assets/cover.png.asset.json";
-const player1 = { url: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" };
-const player2 = { url: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" };
-const testimonial1 = { url: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" };
-const testimonial2 = { url: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" };
+import menPlaying1 from "@/assets/men_playing_1.jpeg.asset.json";
+import menPlaying2 from "@/assets/men_playing_2.jpeg.asset.json";
+import menPlaying3 from "@/assets/men_playing_3.jpeg.asset.json";
+import femaleSoccer from "@/assets/female_soccer.jpeg.asset.json";
+import kidsSoccer from "@/assets/kids_soccer.jpeg.asset.json";
+
+const player1 = menPlaying1;
+const player2 = menPlaying2;
+const testimonial1 = menPlaying3;
+const testimonial2 = femaleSoccer;
+const kidsAsset = kidsSoccer;
+
 import coachAsset from "@/assets/coach.png.asset.json";
 
-const trainingField1 = "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200";
-const trainingField2 = "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200";
-const trainingField3 = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
-const trainingField4 = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
-const trainingField5 = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
-const trainingField6 = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
+// Field assets for diversity
+const trainingField1 = menPlaying1.url;
+const trainingField2 = menPlaying2.url;
 
-const strikeImg = trainingField1;
-const goalieImg = trainingField1;
-const youthTrainingImg = trainingField3;
-const technicalControlImg = trainingField4;
-const femaleSoccerImg = trainingField4;
-const ballDetailImg = trainingField6;
+const strikeImg = menPlaying1.url;
+const goalieImg = menPlaying2.url;
+const youthTrainingImg = kidsSoccer.url;
+const technicalControlImg = menPlaying3.url;
+const femaleSoccerImg = femaleSoccer.url;
+const ballDetailImg = menPlaying1.url;
 
-const lateralesImg = trainingField1;
-const defensaImg = trainingField4;
-const mediocampistasImg = trainingField2;
-const porterosImg = trainingField1;
-const fisicoImg = trainingField5;
-const infantilImg = trainingField2;
+const lateralesImg = menPlaying1.url;
+const defensaImg = menPlaying2.url;
+const mediocampistasImg = menPlaying3.url;
+const porterosImg = menPlaying1.url;
+const fisicoImg = menPlaying2.url;
+const infantilImg = kidsSoccer.url;
+
 
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
@@ -238,7 +244,7 @@ function LandingPage() {
               controls
               playsInline
               preload="metadata"
-              poster={strikeImg}
+              poster={menPlaying1.url}
               className="h-full w-full"
             >
               <track kind="captions" />
@@ -316,49 +322,49 @@ function LandingPage() {
               icon: Library,
               title: "Laterales y Banda",
               text: "Recorrido por banda, centros y repliegue defensivo.",
-              img: technicalControlImg,
+              img: menPlaying1.url,
             },
             {
               icon: ShieldCheck,
               title: "Defensa Central",
               text: "Marcaje, coberturas y salida limpia de balón.",
-              img: defensaImg,
+              img: menPlaying2.url,
             },
             {
               icon: Zap,
               title: "Delanteros",
               text: "Definición, desmarques y remate en área.",
-              img: strikeImg,
+              img: menPlaying3.url,
             },
             {
               icon: LayoutGrid,
               title: "Mediocampistas",
               text: "Pase, control, conducción y regate en espacio reducido.",
-              img: mediocampistasImg,
+              img: menPlaying1.url,
             },
             {
               icon: Trophy,
               title: "Porteros",
               text: "Reacción, salidas, blocaje y juego con los pies.",
-              img: goalieImg,
+              img: menPlaying2.url,
             },
             {
               icon: Dumbbell,
               title: "Preparación Física",
               text: "Circuitos de fuerza, velocidad, agilidad y resistencia.",
-              img: fisicoImg,
+              img: menPlaying3.url,
             },
             {
               icon: Sparkles,
               title: "Fútbol Femenino",
               text: "Sesiones adaptadas por categoría y nivel competitivo.",
-              img: femaleSoccerImg,
+              img: femaleSoccer.url,
             },
             {
               icon: Star,
               title: "Fútbol Infantil",
               text: "Sub-6 a Sub-12: con juego, progresión y mucha diversión.",
-              img: youthTrainingImg,
+              img: kidsSoccer.url,
             },
           ].map((c, i) => (
             <div
@@ -488,10 +494,10 @@ function LandingPage() {
         <SectionTitle kicker="En el campo" title="Imagina tu equipo entrenando así la próxima semana" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { src: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200", alt: "Sesión de entrenamiento en campo" },
-            { src: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200", alt: "Control técnico profesional" },
-            { src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200", alt: "Duelo táctico en campo" },
-            { src: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200", alt: "Biblioteca de ejercicios prácticos" },
+            { src: menPlaying1.url, alt: "Sesión de entrenamiento en campo" },
+            { src: menPlaying2.url, alt: "Control técnico profesional" },
+            { src: menPlaying3.url, alt: "Duelo táctico en campo" },
+            { src: kidsSoccer.url, alt: "Biblioteca de ejercicios prácticos" },
           ].map((it, i) => (
             <img
               key={i}
@@ -536,12 +542,12 @@ function LandingPage() {
         <div className="relative mt-10">
           <div className="group flex w-fit gap-5 animate-marquee hover:pause-marquee">
             {[
-              { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=800" },
-              { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" },
-              { n: "Ricardo L.", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=800" },
-              { n: "Marcos P.", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=800" },
-              { n: "Diego S.", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=800" },
-              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los ejercicios son una mina de oro para cualquier categoría.", img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=800" },
+              { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: menPlaying1.url },
+              { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: menPlaying2.url },
+              { n: "Ricardo L.", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: menPlaying3.url },
+              { n: "Marcos P.", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: kidsSoccer.url },
+              { n: "Diego S.", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: femaleSoccer.url },
+              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los ejercicios son una mina de oro para cualquier categoría.", img: kidsSoccer.url },
             ].map((t, i) => (
               <figure
                 key={i}
