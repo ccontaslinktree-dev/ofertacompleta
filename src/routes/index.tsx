@@ -34,7 +34,7 @@ const trainingField1 = "https://images.unsplash.com/photo-1574629810360-7efbbe19
 const trainingField2 = "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200";
 const trainingField3 = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
 const trainingField4 = "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200";
-const trainingField5 = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
+const trainingField5 = "https://images.unsplash.com/photo-1552318985-71528b5f59c6?auto=format&fit=crop&q=80&w=1200";
 const trainingField6 = "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&q=80&w=1200";
 const strikeImg = trainingField1;
 const goalieImg = trainingField2;
