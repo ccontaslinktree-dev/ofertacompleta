@@ -31,12 +31,18 @@ import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 import coachAsset from "@/assets/coach.png.asset.json";
 import lateralesImg from "@/assets/feature-sessions.jpg";
 import defensaImg from "@/assets/feature-exercises.jpg";
-import delanterosImg from "@/assets/cover.png.asset.json";
 import mediocampistasImg from "@/assets/feature-360.jpg";
 import porterosImg from "@/assets/feature-sessions.jpg";
 import fisicoImg from "@/assets/feature-exercises.jpg";
-import femeninoImg from "@/assets/cover.png.asset.json";
 import infantilImg from "@/assets/feature-360.jpg";
+
+// Nuevos activos visuales para evitar repeticiones (Simulados con assets existentes mientras se generan nuevos)
+const strikeImg = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
+const goalieImg = "https://images.unsplash.com/photo-1518091043644-c1d445bcc9f2?auto=format&fit=crop&q=80&w=1200";
+const youthTrainingImg = "https://images.unsplash.com/photo-1526232762682-d2d58b6ca0ed?auto=format&fit=crop&q=80&w=1200";
+const technicalControlImg = "https://images.unsplash.com/photo-1552318985-71528b5f59c6?auto=format&fit=crop&q=80&w=1200";
+const femaleSoccerImg = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
+const ballDetailImg = "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&q=80&w=1200";
 
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
@@ -225,7 +231,7 @@ function LandingPage() {
               controls
               playsInline
               preload="metadata"
-              poster={coverAsset.url}
+              poster={strikeImg}
               className="h-full w-full"
             >
               <track kind="captions" />
@@ -303,7 +309,7 @@ function LandingPage() {
               icon: Library,
               title: "Laterales y Banda",
               text: "Recorrido por banda, centros y repliegue defensivo.",
-              img: lateralesImg,
+              img: technicalControlImg,
             },
             {
               icon: ShieldCheck,
@@ -315,7 +321,7 @@ function LandingPage() {
               icon: Zap,
               title: "Delanteros",
               text: "Definición, desmarques y remate en área.",
-              img: delanterosImg.url,
+              img: strikeImg,
             },
             {
               icon: LayoutGrid,
@@ -327,7 +333,7 @@ function LandingPage() {
               icon: Trophy,
               title: "Porteros",
               text: "Reacción, salidas, blocaje y juego con los pies.",
-              img: porterosImg,
+              img: goalieImg,
             },
             {
               icon: Dumbbell,
@@ -339,13 +345,13 @@ function LandingPage() {
               icon: Sparkles,
               title: "Fútbol Femenino",
               text: "Sesiones adaptadas por categoría y nivel competitivo.",
-              img: femeninoImg.url,
+              img: femaleSoccerImg,
             },
             {
               icon: Star,
               title: "Fútbol Infantil",
               text: "Sub-6 a Sub-12: con juego, progresión y mucha diversión.",
-              img: infantilImg,
+              img: youthTrainingImg,
             },
           ].map((c, i) => (
             <div
@@ -476,9 +482,9 @@ function LandingPage() {
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
             { src: player1.url, alt: "Jugador entrenando con balón en el campo" },
-            { src: featureSessions, alt: "Vista de sesiones de entrenamiento" },
+            { src: strikeImg, alt: "Vista de sesiones de entrenamiento" },
             { src: player2.url, alt: "Duelo uno contra uno en partido" },
-            { src: featureExercises, alt: "Biblioteca de +2.000 ejercicios" },
+            { src: youthTrainingImg, alt: "Biblioteca de +2.000 ejercicios" },
           ].map((it, i) => (
             <img
               key={i}
@@ -568,104 +574,6 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ============ SIN VS CON ============ */}
-      <section className="bg-card px-5 py-16 md:py-24">
-        <div className="mx-auto max-w-5xl">
-          <SectionTitle kicker="La diferencia es clara" title="¿CÓMO SERÁ TU PRÓXIMA SEMANA?" />
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {/* SIN MÉTODO */}
-            <div className="rounded-3xl border border-destructive/20 bg-background p-8 shadow-elegant" data-reveal>
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-destructive/10 text-destructive">
-                <XCircle className="h-6 w-6" />
-              </div>
-              <h3 className="text-2xl font-black uppercase text-destructive">Sin el Método</h3>
-              <ul className="mt-6 space-y-4">
-                {[
-                  "Llegas al campo sin saber qué hacer hoy.",
-                  "Pierdes horas buscando en YouTube y no encuentras nada útil.",
-                  "Tus jugadores se aburren repitiendo siempre lo mismo.",
-                  "Te sientes estancado y sin herramientas para avanzar.",
-                  "Improvisas y rezas para que el entrenamiento salga bien.",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 opacity-50" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* CON MÉTODO */}
-            <div className="rounded-3xl border border-primary/20 bg-background p-8 shadow-glow" data-reveal>
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <CheckCircle2 className="h-6 w-6" />
-              </div>
-              <h3 className="text-2xl font-black uppercase text-primary">Con la Plataforma</h3>
-              <ul className="mt-6 space-y-4">
-                {[
-                  "Sesión lista en 5 minutos: solo eliges y aplicas.",
-                  "Videos didácticos que te muestran la técnica exacta.",
-                  "Jugadores motivados con ejercicios de élite.",
-                  "Evolución constante y reconocimiento profesional.",
-                  "Seguridad total de estar usando un método probado.",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm font-medium">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ QUIEN SOY (Coach Martínez) ============ */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <div className="relative" data-reveal>
-            <div className="absolute -inset-4 rounded-3xl bg-gold/5 blur-2xl" />
-            <img
-              src={coachAsset.url}
-              alt="Coach Martínez"
-              className="relative rounded-3xl border border-border bg-card shadow-elegant"
-            />
-            <div className="absolute -bottom-6 -right-6 rounded-2xl bg-primary px-6 py-4 shadow-glow">
-              <div className="text-2xl font-black text-primary-foreground">+15 AÑOS</div>
-              <div className="text-xs font-bold uppercase tracking-widest text-primary-foreground/80">de experiencia</div>
-            </div>
-          </div>
-          <div data-reveal>
-            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
-              Sobre el creador
-            </div>
-            <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl md:text-5xl">
-              SOY EL <span className="text-primary">COACH MARTÍNEZ</span>
-            </h2>
-            <div className="mt-6 space-y-4 text-base text-muted-foreground sm:text-lg">
-              <p>
-                He pasado más de una década en los campos, desde categorías base hasta el alto rendimiento. Sé exactamente lo que es llegar a un entrenamiento con la mente en blanco, sintiendo que le estás fallando a tus jugadores.
-              </p>
-              <p>
-                Por eso creé esta plataforma. No es solo una lista de ejercicios; es el sistema organizado que yo mismo uso para dejar de improvisar. 
-              </p>
-              <p>
-                Mi misión es democratizar el entrenamiento de élite para que cualquier jugador o entrenador, sin importar su nivel, tenga acceso a la misma metodología que usan los profesionales.
-              </p>
-            </div>
-            <div className="mt-8 flex items-center gap-4">
-              <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="h-10 w-10 rounded-full border-2 border-background bg-muted shadow-sm" />
-                ))}
-              </div>
-              <div className="text-sm font-bold text-foreground">
-                Únete a +2.146 que ya confían en el método
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ============ DESGLOSE DE VALOR + OFERTA DOBLE ============ */}
       <section id="oferta" className="relative overflow-hidden py-20 md:py-28">
