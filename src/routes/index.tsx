@@ -231,7 +231,7 @@ function LandingPage() {
               controls
               playsInline
               preload="metadata"
-              poster={coverAsset.url}
+              poster={strikeImg}
               className="h-full w-full"
             >
               <track kind="captions" />
