@@ -484,7 +484,7 @@ function LandingPage() {
             { src: player1.url, alt: "Jugador entrenando con balón en el campo" },
             { src: strikeImg, alt: "Vista de sesiones de entrenamiento" },
             { src: player2.url, alt: "Duelo uno contra uno en partido" },
-            { src: youthTrainingImg, alt: "Biblioteca de +2.000 ejercicios" },
+            { src: youthTrainingImg, alt: "Biblioteca de ejercicios profesionales" },
           ].map((it, i) => (
             <img
               key={i}
