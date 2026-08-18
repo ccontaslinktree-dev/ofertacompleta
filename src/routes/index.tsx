@@ -352,19 +352,19 @@ function LandingPage() {
               icon: Dumbbell,
               title: "Preparación Física",
               text: "Circuitos de fuerza, velocidad, agilidad y resistencia.",
-              img: fisicoImg,
+              img: menPlaying3.url,
             },
             {
               icon: Sparkles,
               title: "Fútbol Femenino",
               text: "Sesiones adaptadas por categoría y nivel competitivo.",
-              img: femaleSoccerImg,
+              img: femaleSoccer.url,
             },
             {
               icon: Star,
               title: "Fútbol Infantil",
               text: "Sub-6 a Sub-12: con juego, progresión y mucha diversión.",
-              img: youthTrainingImg,
+              img: kidsSoccer.url,
             },
           ].map((c, i) => (
             <div
