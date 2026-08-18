@@ -244,7 +244,7 @@ function LandingPage() {
               controls
               playsInline
               preload="metadata"
-              poster={strikeImg}
+              poster={menPlaying1.url}
               className="h-full w-full"
             >
               <track kind="captions" />
