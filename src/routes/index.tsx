@@ -162,52 +162,110 @@ function LandingPage() {
         </div>
       </header>
 
-      {/* ============ VIDEO (subido para generar deseo inmediato) ============ */}
-      <section className="mx-auto max-w-5xl px-5 pt-10 pb-12 md:pt-14 md:pb-16">
-        <div className="mx-auto mb-6 max-w-2xl text-center" data-reveal>
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
-            Mira lo que vas a recibir
-          </div>
-          <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl md:text-5xl">
-            Esto es lo que <span className="text-primary">TÚ vas a tener</span> en tus manos hoy
-          </h2>
-          <p className="mt-3 text-base text-muted-foreground sm:text-lg">
-            Dale play. En menos de 2 minutos vas a entender por qué esto vale 10 veces más de lo que cuesta.
+      {/* ============ MEMBERSHIP AREA ============ */}
+      <section className="border-t border-border px-5 py-16 md:py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle kicker="Tu área de miembros exclusiva" title="TU PLATAFORMA PERSONAL, LISTA EN MINUTOS" />
+          <p className="mx-auto -mt-6 mb-12 max-w-3xl text-center text-base text-muted-foreground sm:text-lg">
+            Olvídate de buscar archivos sueltos. Al unirte, recibes acceso a una plataforma web completa diseñada para organizar, acelerar y potenciar tu evolución: biblioteca + videos didácticos + herramientas de planificación, todo en un solo lugar.
           </p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "Login exclusivo", desc: "Tu progreso y contenido siempre seguros y a mano con usuario y contraseña." },
+              { title: "Panel organizado", desc: "Navega fácilmente por posición, edad u objetivo del día." },
+              { title: "Reproductor integrado", desc: "Mira la técnica correcta sin salir de la sesión con video streaming." },
+              { title: "Acceso multidispositivo", desc: "Usa tu móvil en el campo o tu tablet en casa sin limitaciones." },
+              { title: "Actualizaciones automáticas", desc: "Recibe contenido nuevo sin tener que descargar nada de nuevo." },
+              { title: "Soporte prioritario", desc: "Estamos contigo en cada paso de tu evolución profesional." },
+            ].map((f, i) => (
+              <div key={i} data-reveal className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-elegant">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <CheckCircle2 className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-black uppercase">{f.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{f.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div
-          data-reveal
-          className="relative mx-auto aspect-video overflow-hidden rounded-2xl border border-border bg-black shadow-elegant"
-        >
-          <video
-            src={videoAsset.url}
-            controls
-            playsInline
-            preload="metadata"
-            poster={coverAsset.url}
-            className="h-full w-full"
+      </section>
+
+      {/* ============ VIDEO ============ */}
+      <section className="bg-card px-5 py-16 md:py-24">
+        <div className="mx-auto max-w-5xl">
+          <div className="mx-auto mb-10 max-w-3xl text-center" data-reveal>
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
+              Mira esto antes de seguir
+            </div>
+            <h2 className="text-3xl font-black uppercase leading-tight sm:text-4xl md:text-5xl">
+              TODO CON <span className="text-primary">VIDEO STREAMING</span> INTEGRADO
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+              Dentro de tu plataforma, cada ejercicio cuenta con material en video donde el coach muestra la técnica correcta, la organización del campo y los errores más comunes. No solo ves el ejercicio: lo entiendes, lo copias y lo aplicas con seguridad desde el primer minuto.
+            </p>
+          </div>
+          <div
+            data-reveal
+            className="relative mx-auto aspect-video overflow-hidden rounded-2xl border border-border bg-black shadow-elegant"
           >
-            <track kind="captions" />
-          </video>
+            <video
+              src={videoAsset.url}
+              controls
+              playsInline
+              preload="metadata"
+              poster={coverAsset.url}
+              className="h-full w-full"
+            >
+              <track kind="captions" />
+            </video>
+          </div>
+          <div className="mt-8 grid gap-4 text-center sm:grid-cols-3" data-reveal>
+            <div className="rounded-xl border border-border bg-background p-4">
+              <div className="font-black text-primary">Experiencia fluida</div>
+              <div className="text-xs text-muted-foreground">En cualquier dispositivo</div>
+            </div>
+            <div className="rounded-xl border border-border bg-background p-4">
+              <div className="font-black text-primary">Técnica exacta</div>
+              <div className="text-xs text-muted-foreground">Copia cada movimiento</div>
+            </div>
+            <div className="rounded-xl border border-border bg-background p-4">
+              <div className="font-black text-primary">120+ Videos</div>
+              <div className="text-xs text-muted-foreground">Organizados por nivel</div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ============ PROBLEMA (dolor) ============ */}
-      <section className="mx-auto max-w-4xl px-5 py-16 text-center md:py-20">
+      <section className="mx-auto max-w-5xl px-5 py-16 text-center md:py-24">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-destructive/40 bg-destructive/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-destructive" data-reveal>
-          <AlertTriangle className="h-4 w-4" /> La dura verdad
+          <AlertTriangle className="h-4 w-4" /> SEAMOS HONESTOS
         </div>
-        <p className="text-2xl font-bold leading-snug sm:text-3xl md:text-4xl" data-reveal>
-          Cada semana pierdes <span className="text-destructive/90">horas buscando ejercicios en YouTube</span>,
-          copiando dibujos en papel y llegando al entrenamiento sintiendo que <em>improvisas</em>.
+        <h2 className="mx-auto max-w-3xl text-3xl font-black uppercase leading-tight sm:text-4xl md:text-5xl" data-reveal>
+          ¿TE IDENTIFICAS CON ALGUNA DE ESTAS <span className="text-destructive">SITUACIONES</span>?
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg" data-reveal>
+          Si respondes "sí" a dos o más de estas situaciones, probablemente el problema no sea tu esfuerzo... sino la falta de un método claro para entrenar.
         </p>
-        <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg" data-reveal>
-          Los jugadores lo notan. Los padres lo notan. Y tú, en el fondo, sabes que mereces preparar
-          sesiones con la misma calidad que un entrenador de élite — pero no tienes ni el tiempo ni
-          la biblioteca para hacerlo.
-        </p>
-        <p className="mx-auto mt-6 max-w-2xl text-lg font-bold text-primary sm:text-xl" data-reveal>
-          Hoy eso termina.
+        <div className="mt-12 grid gap-4 text-left md:grid-cols-2" data-reveal>
+          {[
+            "Llegas al entrenamiento sin un plan claro y terminas improvisando toda la sesión.",
+            "Entrenas durante semanas, pero cuando llega el partido sigues cometiendo los mismos errores.",
+            "Pierdes horas buscando ejercicios en YouTube sin saber cuáles realmente funcionan.",
+            "Repites los mismos entrenamientos una y otra vez por falta de nuevas ideas.",
+            "No sabes qué entrenar según la posición o la edad, limitando el progreso real.",
+            "Sientes que podrías conseguir mucho más con una metodología profesional de élite.",
+          ].map((item, i) => (
+            <div key={i} className="flex items-center gap-3 rounded-xl border border-border bg-card p-4">
+              <XCircle className="h-5 w-5 shrink-0 text-destructive" />
+              <span className="text-sm font-medium">{item}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mx-auto mt-10 max-w-3xl text-base text-muted-foreground sm:text-lg" data-reveal>
+          El talento sin dirección se pierde. Cada semana entrenando a ciegas es una semana que no vuelve. Nadie se estanca por falta de ganas: se estanca por no saber qué entrenar hoy. <strong className="text-foreground">Eso se resuelve hoy.</strong>
         </p>
         <div className="mt-8" data-reveal>
           <a
@@ -215,7 +273,7 @@ function LandingPage() {
             className="group relative inline-flex items-center justify-center gap-2 rounded-2xl bg-primary-gradient px-8 py-5 text-base font-black uppercase tracking-wide text-primary-foreground shadow-glow transition-transform duration-200 hover:scale-[1.02] active:scale-[0.99] sm:text-lg"
           >
             <Flame className="h-5 w-5" />
-            Ver Oferta Plataforma Completa
+            DEJAR DE IMPROVISAR AHORA
             <span className="absolute inset-0 -z-10 rounded-2xl bg-primary-gradient blur-xl opacity-40 group-hover:opacity-70 transition-opacity" />
           </a>
         </div>
