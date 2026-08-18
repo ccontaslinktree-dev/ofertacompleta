@@ -30,26 +30,26 @@ const testimonial1 = { url: "https://images.unsplash.com/photo-1543351611-58f69d
 const testimonial2 = { url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=800" };
 import coachAsset from "@/assets/coach.png.asset.json";
 
-const trainingField1 = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
-const trainingField2 = "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200";
-const trainingField3 = "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200";
-const trainingField4 = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
-const trainingField5 = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
-const trainingField6 = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
+const trainingField1 = "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200";
+const trainingField2 = "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200";
+const trainingField3 = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
+const trainingField4 = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
+const trainingField5 = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
+const trainingField6 = "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=1200&action=1";
 
 const strikeImg = trainingField1;
-const goalieImg = trainingField2;
+const goalieImg = trainingField1;
 const youthTrainingImg = trainingField3;
 const technicalControlImg = trainingField4;
-const femaleSoccerImg = trainingField5;
+const femaleSoccerImg = trainingField4;
 const ballDetailImg = trainingField6;
 
 const lateralesImg = trainingField1;
 const defensaImg = trainingField4;
 const mediocampistasImg = trainingField2;
-const porterosImg = trainingField3;
+const porterosImg = trainingField1;
 const fisicoImg = trainingField5;
-const infantilImg = trainingField6;
+const infantilImg = trainingField2;
 
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
