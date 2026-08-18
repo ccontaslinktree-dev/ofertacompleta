@@ -152,18 +152,18 @@ function LandingPage() {
               DESCUBRE EL MÉTODO PROFESIONAL PARA <span className="text-primary">DEJAR DE IMPROVISAR</span> Y EVOLUCIONAR MÁS RÁPIDO
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-base text-muted-foreground sm:text-lg md:text-xl">
-              Accede a una <strong className="text-foreground">Plataforma Completa</strong> de entrenamiento profesional: biblioteca organizada con +250 sesiones y +2.000 ejercicios, más materiales en video integrados que te muestran exactamente cómo ejecutar cada ejercicio. 
+              Accede a una <strong className="text-foreground">Plataforma Completa</strong> de entrenamiento profesional: biblioteca organizada con sesiones y ejercicios, más materias en video integradas que te muestran exactamente cómo ejecutar cada ejercicio. 
               <br />
               <strong className="text-foreground">Un solo pago, acceso de por vida.</strong>
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-center">
               <div>
-                <div className="text-2xl font-black text-primary">+250</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">sesiones listas</div>
+                <div className="text-2xl font-black text-primary">SESIONES</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">listas para aplicar</div>
               </div>
               <div className="border-x border-border px-6">
-                <div className="text-2xl font-black text-primary">+2.000</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">ejercicios ilustrados</div>
+                <div className="text-2xl font-black text-primary">EJERCICIOS</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">técnica ilustrada</div>
               </div>
               <div>
                 <div className="text-2xl font-black text-primary">5 min</div>
