@@ -38,9 +38,9 @@ const infantilImg = feature360;
 
 // Nuevos activos visuales para evitar repeticiones (Simulados con assets existentes mientras se generan nuevos)
 const strikeImg = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
-const goalieImg = "https://images.unsplash.com/photo-1550889414-8224347745ee?auto=format&fit=crop&q=80&w=1200";
+const goalieImg = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
 const youthTrainingImg = "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=1200";
-const technicalControlImg = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
+const technicalControlImg = "https://images.unsplash.com/photo-1550889414-8224347745ee?auto=format&fit=crop&q=80&w=1200";
 const femaleSoccerImg = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
 const ballDetailImg = "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&q=80&w=1200";
 
