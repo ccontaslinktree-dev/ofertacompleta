@@ -309,7 +309,7 @@ function LandingPage() {
               icon: Library,
               title: "Laterales y Banda",
               text: "Recorrido por banda, centros y repliegue defensivo.",
-              img: lateralesImg,
+              img: technicalControlImg,
             },
             {
               icon: ShieldCheck,
@@ -321,7 +321,7 @@ function LandingPage() {
               icon: Zap,
               title: "Delanteros",
               text: "Definición, desmarques y remate en área.",
-              img: delanterosImg.url,
+              img: strikeImg,
             },
             {
               icon: LayoutGrid,
@@ -333,7 +333,7 @@ function LandingPage() {
               icon: Trophy,
               title: "Porteros",
               text: "Reacción, salidas, blocaje y juego con los pies.",
-              img: porterosImg,
+              img: goalieImg,
             },
             {
               icon: Dumbbell,
@@ -345,13 +345,13 @@ function LandingPage() {
               icon: Sparkles,
               title: "Fútbol Femenino",
               text: "Sesiones adaptadas por categoría y nivel competitivo.",
-              img: femeninoImg.url,
+              img: femaleSoccerImg,
             },
             {
               icon: Star,
               title: "Fútbol Infantil",
               text: "Sub-6 a Sub-12: con juego, progresión y mucha diversión.",
-              img: infantilImg,
+              img: youthTrainingImg,
             },
           ].map((c, i) => (
             <div
