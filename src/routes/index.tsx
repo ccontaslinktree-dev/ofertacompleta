@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import {
   Flame,
-  ShieldCheck,
   Zap,
   CheckCircle2,
    XCircle,
