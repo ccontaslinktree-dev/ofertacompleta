@@ -283,31 +283,58 @@ function LandingPage() {
 
       {/* ============ SOLUCIÓN ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <SectionTitle kicker="Todo en un solo producto" title="5 entregables premium · 1 sola plataforma" />
+        <SectionTitle kicker="Esto es lo que vas a tener" title="CONTENIDO PROFESIONAL POR POSICIÓN Y CATEGORÍA" />
+        <p className="mx-auto -mt-6 mb-12 max-w-3xl text-center text-base text-muted-foreground sm:text-lg">
+          Dentro de la biblioteca encuentras todo esto organizado por posición, edad y objetivo. Eliges el área que quieres trabajar hoy, abres la sesión y aplicas. Así de simple.
+        </p>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
             {
               icon: Library,
-              title: "+250 Sesiones Interactivas",
-              text: "Sesiones completas listas para copiar y aplicar hoy mismo. Organizadas por posición, categoría y edad.",
+              title: "Laterales y Banda",
+              text: "Recorrido por banda, centros y repliegue defensivo.",
               img: featureSessions,
             },
             {
+              icon: ShieldCheck,
+              title: "Defensa Central",
+              text: "Marcaje, coberturas y salida limpia de balón.",
+              img: featureExercises,
+            },
+            {
+              icon: Zap,
+              title: "Delanteros",
+              text: "Definición, desmarques y remate en área.",
+              img: coverAsset.url,
+            },
+            {
               icon: LayoutGrid,
-              title: "+2.000 Ejercicios de Fútbol",
-              text: "Biblioteca con diagramas, objetivos y variantes. Nunca más te vas a quedar sin ideas.",
+              title: "Mediocampistas",
+              text: "Pase, control, conducción y regate en espacio reducido.",
+              img: feature360,
+            },
+            {
+              icon: Trophy,
+              title: "Porteros",
+              text: "Reacción, salidas, blocaje y juego con los pies.",
+              img: featureSessions,
+            },
+            {
+              icon: Dumbbell,
+              title: "Preparación Física",
+              text: "Circuitos de fuerza, velocidad, agilidad y resistencia.",
               img: featureExercises,
             },
             {
               icon: Sparkles,
-              title: "Videos Didácticos Integrados",
-              text: "Cada ejercicio incluye su video explicativo. Ves la técnica exacta y la organización del campo directo en tu plataforma.",
+              title: "Fútbol Femenino",
+              text: "Sesiones adaptadas por categoría y nivel competitivo.",
               img: coverAsset.url,
             },
             {
-              icon: Trophy,
-              title: "Fútbol 360° Completo",
-              text: "Fútbol femenino + infantil + preparación física. Todo incluido en tu área de miembros.",
+              icon: Star,
+              title: "Fútbol Infantil",
+              text: "Sub-6 a Sub-12: con juego, progresión y mucha diversión.",
               img: feature360,
             },
           ].map((c, i) => (
