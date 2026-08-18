@@ -32,24 +32,24 @@ import coachAsset from "@/assets/coach.png.asset.json";
 
 const trainingField1 = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
 const trainingField2 = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
-const trainingField3 = "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=1200";
+const trainingField3 = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
 const trainingField4 = "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200";
-const trainingField5 = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
+const trainingField5 = "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=1200";
 const trainingField6 = "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&q=80&w=1200";
 
-const strikeImg = trainingField1;
-const goalieImg = trainingField2;
-const youthTrainingImg = trainingField3;
+const strikeImg = trainingField2;
+const goalieImg = trainingField3;
+const youthTrainingImg = trainingField5;
 const technicalControlImg = trainingField4;
-const femaleSoccerImg = trainingField5;
+const femaleSoccerImg = trainingField1;
 const ballDetailImg = trainingField6;
 
 const lateralesImg = strikeImg;
-const defensaImg = goalieImg;
-const mediocampistasImg = technicalControlImg;
-const porterosImg = femaleSoccerImg;
-const fisicoImg = youthTrainingImg;
-const infantilImg = ballDetailImg;
+const defensaImg = technicalControlImg;
+const mediocampistasImg = trainingField6;
+const porterosImg = goalieImg;
+const fisicoImg = trainingField4;
+const infantilImg = youthTrainingImg;
 
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
