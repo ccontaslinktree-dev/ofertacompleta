@@ -601,8 +601,8 @@ function LandingPage() {
               <ul className="mt-8 space-y-4 flex-1">
                 {[
                   ["Plataforma Web Completa (área de miembros)", "$11,90"],
-                  ["+250 Sesiones de Entrenamiento", "$9"],
-                  ["+2.000 Ejercicios organizados", "$9"],
+                  ["Sesiones de Entrenamiento", "$9"],
+                  ["Ejercicios organizados", "$9"],
                   ["Videos didácticos de cada ejercicio", "$10"],
                   ["Fútbol 360° completo (femenino, infantil, físico)", "$5"],
                 ].map(([item, price], i) => (
