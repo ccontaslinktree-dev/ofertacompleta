@@ -29,12 +29,12 @@ import player2 from "@/assets/player-2.jpg.asset.json";
 import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
 import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 import coachAsset from "@/assets/coach.png.asset.json";
-import lateralesImg from "@/assets/feature-sessions.jpg";
-import defensaImg from "@/assets/feature-exercises.jpg";
-import mediocampistasImg from "@/assets/feature-360.jpg";
-import porterosImg from "@/assets/feature-sessions.jpg";
-import fisicoImg from "@/assets/feature-exercises.jpg";
-import infantilImg from "@/assets/feature-360.jpg";
+const lateralesImg = featureSessions;
+const defensaImg = featureExercises;
+const mediocampistasImg = feature360;
+const porterosImg = featureSessions;
+const fisicoImg = featureExercises;
+const infantilImg = feature360;
 
 // Nuevos activos visuales para evitar repeticiones (Simulados con assets existentes mientras se generan nuevos)
 const strikeImg = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
