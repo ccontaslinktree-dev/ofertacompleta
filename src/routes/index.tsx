@@ -29,6 +29,15 @@ import player2 from "@/assets/player-2.jpg.asset.json";
 import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
 import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 import coachAsset from "@/assets/coach.png.asset.json";
+import lateralesImg from "@/assets/feature-sessions.jpg";
+import defensaImg from "@/assets/feature-exercises.jpg";
+import delanterosImg from "@/assets/cover.png.asset.json";
+import mediocampistasImg from "@/assets/feature-360.jpg";
+import porterosImg from "@/assets/feature-sessions.jpg";
+import fisicoImg from "@/assets/feature-exercises.jpg";
+import femeninoImg from "@/assets/cover.png.asset.json";
+import infantilImg from "@/assets/feature-360.jpg";
+
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
 const CHECKOUT_LINK_BASIC = "https://pay.kiwify.com/eQoQd0Y";
@@ -294,49 +303,49 @@ function LandingPage() {
               icon: Library,
               title: "Laterales y Banda",
               text: "Recorrido por banda, centros y repliegue defensivo.",
-              img: featureSessions,
+              img: lateralesImg,
             },
             {
               icon: ShieldCheck,
               title: "Defensa Central",
               text: "Marcaje, coberturas y salida limpia de balón.",
-              img: featureExercises,
+              img: defensaImg,
             },
             {
               icon: Zap,
               title: "Delanteros",
               text: "Definición, desmarques y remate en área.",
-              img: coverAsset.url,
+              img: delanterosImg.url,
             },
             {
               icon: LayoutGrid,
               title: "Mediocampistas",
               text: "Pase, control, conducción y regate en espacio reducido.",
-              img: feature360,
+              img: mediocampistasImg,
             },
             {
               icon: Trophy,
               title: "Porteros",
               text: "Reacción, salidas, blocaje y juego con los pies.",
-              img: featureSessions,
+              img: porterosImg,
             },
             {
               icon: Dumbbell,
               title: "Preparación Física",
               text: "Circuitos de fuerza, velocidad, agilidad y resistencia.",
-              img: featureExercises,
+              img: fisicoImg,
             },
             {
               icon: Sparkles,
               title: "Fútbol Femenino",
               text: "Sesiones adaptadas por categoría y nivel competitivo.",
-              img: coverAsset.url,
+              img: femeninoImg.url,
             },
             {
               icon: Star,
               title: "Fútbol Infantil",
               text: "Sub-6 a Sub-12: con juego, progresión y mucha diversión.",
-              img: feature360,
+              img: infantilImg,
             },
           ].map((c, i) => (
             <div
