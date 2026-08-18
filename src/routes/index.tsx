@@ -482,9 +482,9 @@ function LandingPage() {
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
             { src: player1.url, alt: "Jugador entrenando con balón en el campo" },
-            { src: featureSessions, alt: "Vista de sesiones de entrenamiento" },
+            { src: strikeImg, alt: "Vista de sesiones de entrenamiento" },
             { src: player2.url, alt: "Duelo uno contra uno en partido" },
-            { src: featureExercises, alt: "Biblioteca de +2.000 ejercicios" },
+            { src: youthTrainingImg, alt: "Biblioteca de +2.000 ejercicios" },
           ].map((it, i) => (
             <img
               key={i}
