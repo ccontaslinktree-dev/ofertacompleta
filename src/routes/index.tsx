@@ -19,9 +19,9 @@ import {
   AlertTriangle,
 } from "lucide-react";
 
-import featureSessions from "@/assets/feature-sessions.jpg.asset.json";
-import featureExercises from "@/assets/feature-exercises.jpg.asset.json";
-import feature360 from "@/assets/feature-360.jpg.asset.json";
+import featureSessions from "@/assets/feature-sessions.jpg";
+import featureExercises from "@/assets/feature-exercises.jpg";
+import feature360 from "@/assets/feature-360.jpg";
 import videoAsset from "@/assets/video-demo.mp4.asset.json";
 import coverAsset from "@/assets/cover.png.asset.json";
 import player1 from "@/assets/player-1.jpg.asset.json";
@@ -29,12 +29,12 @@ import player2 from "@/assets/player-2.jpg.asset.json";
 import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
 import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 import coachAsset from "@/assets/coach.png.asset.json";
-import lateralesImg from "@/assets/feature-sessions.jpg.asset.json";
-import defensaImg from "@/assets/feature-exercises.jpg.asset.json";
-import mediocampistasImg from "@/assets/feature-360.jpg.asset.json";
-import porterosImg from "@/assets/feature-sessions.jpg.asset.json";
-import fisicoImg from "@/assets/feature-exercises.jpg.asset.json";
-import infantilImg from "@/assets/feature-360.jpg.asset.json";
+import lateralesImg from "@/assets/feature-sessions.jpg";
+import defensaImg from "@/assets/feature-exercises.jpg";
+import mediocampistasImg from "@/assets/feature-360.jpg";
+import porterosImg from "@/assets/feature-sessions.jpg";
+import fisicoImg from "@/assets/feature-exercises.jpg";
+import infantilImg from "@/assets/feature-360.jpg";
 
 // Nuevos activos visuales para evitar repeticiones (Simulados con assets existentes mientras se generan nuevos)
 const strikeImg = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
