@@ -24,24 +24,32 @@ import featureExercises from "@/assets/feature-exercises.jpg";
 import feature360 from "@/assets/feature-360.jpg";
 import videoAsset from "@/assets/video-demo.mp4.asset.json";
 import coverAsset from "@/assets/cover.png.asset.json";
-const player1 = { url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=400" };
-const player2 = { url: "https://images.unsplash.com/photo-1550889414-8224347745ee?auto=format&fit=crop&q=80&w=400" };
-const testimonial1 = { url: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=400" };
-const testimonial2 = { url: "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=400" };
+const player1 = { url: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" };
+const player2 = { url: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" };
+const testimonial1 = { url: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" };
+const testimonial2 = { url: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" };
 import coachAsset from "@/assets/coach.png.asset.json";
-const strikeImg = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
-const goalieImg = "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=1200";
-const youthTrainingImg = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
-const technicalControlImg = "https://images.unsplash.com/photo-1550889414-8224347745ee?auto=format&fit=crop&q=80&w=1200";
-const femaleSoccerImg = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
-const ballDetailImg = "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&q=80&w=1200";
 
-const lateralesImg = strikeImg;
-const defensaImg = goalieImg;
-const mediocampistasImg = technicalControlImg;
-const porterosImg = femaleSoccerImg;
-const fisicoImg = youthTrainingImg;
-const infantilImg = ballDetailImg;
+const trainingField1 = "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200";
+const trainingField2 = "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200";
+const trainingField3 = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
+const trainingField4 = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
+const trainingField5 = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
+const trainingField6 = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
+
+const strikeImg = trainingField1;
+const goalieImg = trainingField1;
+const youthTrainingImg = trainingField3;
+const technicalControlImg = trainingField4;
+const femaleSoccerImg = trainingField4;
+const ballDetailImg = trainingField6;
+
+const lateralesImg = trainingField1;
+const defensaImg = trainingField4;
+const mediocampistasImg = trainingField2;
+const porterosImg = trainingField1;
+const fisicoImg = trainingField5;
+const infantilImg = trainingField2;
 
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
@@ -364,7 +372,7 @@ function LandingPage() {
               <h3 className="text-xl font-black uppercase">{c.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{c.text}</p>
               <img
-                src={typeof c.img === 'string' ? c.img : (c.img as any)?.url || ""}
+                src={typeof c.img === 'string' ? c.img : (c.img as any).url}
                 alt={c.title}
                 width={1200}
                 height={900}
@@ -480,15 +488,15 @@ function LandingPage() {
         <SectionTitle kicker="En el campo" title="Imagina tu equipo entrenando así la próxima semana" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { src: player1.url, alt: "Jugador entrenando con balón en el campo" },
-            { src: strikeImg, alt: "Vista de sesiones de entrenamiento" },
-            { src: player2.url, alt: "Duelo uno contra uno en partido" },
-            { src: youthTrainingImg, alt: "Biblioteca de ejercicios profesionales" },
+            { src: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200", alt: "Sesión de entrenamiento en campo" },
+            { src: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200", alt: "Control técnico profesional" },
+            { src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200", alt: "Duelo táctico en campo" },
+            { src: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200", alt: "Biblioteca de ejercicios prácticos" },
           ].map((it, i) => (
             <img
               key={i}
               data-reveal
-              src={typeof it.src === 'string' ? it.src : (it.src as any)?.url || ""}
+              src={typeof it.src === 'string' ? it.src : (it.src as any).url}
               alt={it.alt}
               width={1200}
               height={900}
@@ -528,18 +536,12 @@ function LandingPage() {
         <div className="relative mt-10">
           <div className="group flex w-fit gap-5 animate-marquee hover:pause-marquee">
             {[
-              { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
-              { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
-              { n: "Ricardo L.", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: player1.url },
-              { n: "Marcos P.", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: player2.url },
-              { n: "Diego S.", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: testimonial1.url },
-              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los ejercicios son una mina de oro para cualquier categoría.", img: testimonial2.url },
-              { n: "Carlos M. (Bis)", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
-              { n: "Andrés G. (Bis)", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
-              { n: "Ricardo L. (Bis)", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: player1.url },
-              { n: "Marcos P. (Bis)", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: player2.url },
-              { n: "Diego S. (Bis)", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: testimonial1.url },
-              { n: "Javier V. (Bis)", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los 2.000 ejercicios son una mina de oro para cualquier categoría.", img: testimonial2.url },
+              { n: "Carlos M.", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=800" },
+              { n: "Andrés G.", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800" },
+              { n: "Ricardo L.", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=800" },
+              { n: "Marcos P.", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=800" },
+              { n: "Diego S.", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=800" },
+              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los ejercicios son una mina de oro para cualquier categoría.", img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=800" },
             ].map((t, i) => (
               <figure
                 key={i}
@@ -555,7 +557,7 @@ function LandingPage() {
                 </blockquote>
                 <figcaption className="mt-4 flex items-center gap-3">
                   <img
-                    src={typeof t.img === 'string' ? t.img : (t.img as any)?.url || ""}
+                    src={typeof t.img === 'string' ? t.img : (t.img as any).url}
                     alt={t.n}
                     width={44}
                     height={44}
