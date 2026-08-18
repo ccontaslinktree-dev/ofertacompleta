@@ -39,21 +39,21 @@ const kidsAsset = kidsSoccer;
 import coachAsset from "@/assets/coach.png.asset.json";
 
 // Field assets for diversity
-const trainingField1 = "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=1200";
-const trainingField2 = "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200";
+const trainingField1 = menPlaying1.url;
+const trainingField2 = menPlaying2.url;
 
 const strikeImg = menPlaying1.url;
 const goalieImg = menPlaying2.url;
 const youthTrainingImg = kidsSoccer.url;
 const technicalControlImg = menPlaying3.url;
 const femaleSoccerImg = femaleSoccer.url;
-const ballDetailImg = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
+const ballDetailImg = menPlaying1.url;
 
 const lateralesImg = menPlaying1.url;
 const defensaImg = menPlaying2.url;
 const mediocampistasImg = menPlaying3.url;
-const porterosImg = trainingField1;
-const fisicoImg = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
+const porterosImg = menPlaying1.url;
+const fisicoImg = menPlaying2.url;
 const infantilImg = kidsSoccer.url;
 
 
