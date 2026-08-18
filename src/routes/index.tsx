@@ -31,12 +31,18 @@ import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
 import coachAsset from "@/assets/coach.png.asset.json";
 import lateralesImg from "@/assets/feature-sessions.jpg";
 import defensaImg from "@/assets/feature-exercises.jpg";
-import delanterosImg from "@/assets/cover.png.asset.json";
 import mediocampistasImg from "@/assets/feature-360.jpg";
 import porterosImg from "@/assets/feature-sessions.jpg";
 import fisicoImg from "@/assets/feature-exercises.jpg";
-import femeninoImg from "@/assets/cover.png.asset.json";
 import infantilImg from "@/assets/feature-360.jpg";
+
+// Nuevos activos visuales para evitar repeticiones (Simulados con assets existentes mientras se generan nuevos)
+const strikeImg = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
+const goalieImg = "https://images.unsplash.com/photo-1518091043644-c1d445bcc9f2?auto=format&fit=crop&q=80&w=1200";
+const youthTrainingImg = "https://images.unsplash.com/photo-1526232762682-d2d58b6ca0ed?auto=format&fit=crop&q=80&w=1200";
+const technicalControlImg = "https://images.unsplash.com/photo-1552318985-71528b5f59c6?auto=format&fit=crop&q=80&w=1200";
+const femaleSoccerImg = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
+const ballDetailImg = "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&q=80&w=1200";
 
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
