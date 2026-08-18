@@ -55,13 +55,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Accede a nuestra plataforma profesional: +250 sesiones y +2.000 ejercicios con videos didácticos integrados. Mismo método usado por profesionales.",
+          "Accede a nuestra plataforma completa: sesiones y ejercicios organizados con materiales en video didácticos integrados. Mismo método usado por profesionales.",
       },
       { property: "og:title", content: "Entrena con Método: Plataforma de Fútbol Profesional" },
       {
         property: "og:description",
         content:
-          "Plataforma completa con área de miembros, videos y biblioteca de +2.000 ejercicios. Oferta de lanzamiento.",
+          "Plataforma completa con área de miembros, materiales en video y biblioteca de ejercicios. Oferta de lanzamiento.",
       },
       { property: "og:image", content: coachAsset.url },
       { name: "twitter:image", content: coachAsset.url },
