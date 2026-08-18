@@ -24,25 +24,24 @@ import featureExercises from "@/assets/feature-exercises.jpg";
 import feature360 from "@/assets/feature-360.jpg";
 import videoAsset from "@/assets/video-demo.mp4.asset.json";
 import coverAsset from "@/assets/cover.png.asset.json";
-import player1 from "@/assets/player-1.jpg.asset.json";
-import player2 from "@/assets/player-2.jpg.asset.json";
-import testimonial1 from "@/assets/testimonial-1.jpg.asset.json";
-import testimonial2 from "@/assets/testimonial-2.jpg.asset.json";
+const player1 = { url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=400" };
+const player2 = { url: "https://images.unsplash.com/photo-1550889414-8224347745ee?auto=format&fit=crop&q=80&w=400" };
+const testimonial1 = { url: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=400" };
+const testimonial2 = { url: "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=400" };
 import coachAsset from "@/assets/coach.png.asset.json";
-import lateralesImg from "@/assets/feature-sessions.jpg";
-import defensaImg from "@/assets/feature-exercises.jpg";
-import mediocampistasImg from "@/assets/feature-360.jpg";
-import porterosImg from "@/assets/feature-sessions.jpg";
-import fisicoImg from "@/assets/feature-exercises.jpg";
-import infantilImg from "@/assets/feature-360.jpg";
-
-// Nuevos activos visuales para evitar repeticiones (Simulados con assets existentes mientras se generan nuevos)
 const strikeImg = "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200";
-const goalieImg = "https://images.unsplash.com/photo-1518091043644-c1d445bcc9f2?auto=format&fit=crop&q=80&w=1200";
-const youthTrainingImg = "https://images.unsplash.com/photo-1526232762682-d2d58b6ca0ed?auto=format&fit=crop&q=80&w=1200";
-const technicalControlImg = "https://images.unsplash.com/photo-1552318985-71528b5f59c6?auto=format&fit=crop&q=80&w=1200";
+const goalieImg = "https://images.unsplash.com/photo-1510566337590-2fc1f21d0faa?auto=format&fit=crop&q=80&w=1200";
+const youthTrainingImg = "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200";
+const technicalControlImg = "https://images.unsplash.com/photo-1550889414-8224347745ee?auto=format&fit=crop&q=80&w=1200";
 const femaleSoccerImg = "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=1200";
 const ballDetailImg = "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&q=80&w=1200";
+
+const lateralesImg = strikeImg;
+const defensaImg = goalieImg;
+const mediocampistasImg = technicalControlImg;
+const porterosImg = femaleSoccerImg;
+const fisicoImg = youthTrainingImg;
+const infantilImg = ballDetailImg;
 
 
 const CHECKOUT_LINK_FULL = "https://pay.kiwify.com/DdeFcSY";
@@ -55,13 +54,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Accede a nuestra plataforma profesional: +250 sesiones y +2.000 ejercicios con videos didácticos integrados. Mismo método usado por profesionales.",
+          "Accede a nuestra plataforma completa: sesiones y ejercicios organizados con materiales en video didácticos integrados. Mismo método usado por profesionales.",
       },
       { property: "og:title", content: "Entrena con Método: Plataforma de Fútbol Profesional" },
       {
         property: "og:description",
         content:
-          "Plataforma completa con área de miembros, videos y biblioteca de +2.000 ejercicios. Oferta de lanzamiento.",
+          "Plataforma completa con área de miembros, materiales en video y biblioteca de ejercicios. Oferta de lanzamiento.",
       },
       { property: "og:image", content: coachAsset.url },
       { name: "twitter:image", content: coachAsset.url },
@@ -146,24 +145,24 @@ function LandingPage() {
         <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-10 sm:pt-14 md:pb-20">
           <div className="mx-auto max-w-4xl text-center" data-reveal>
             <div className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-4 py-2 text-xs font-black uppercase tracking-widest text-gold-foreground shadow-lg sm:text-sm">
-              🔥 +2.146 jugadores y entrenadores ya evolucionando ⚽
+              🔥 Jugadores y entrenadores ya evolucionando ⚽
             </div>
             <h1 className="mt-6 text-4xl font-black uppercase leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl">
               DESCUBRE EL MÉTODO PROFESIONAL PARA <span className="text-primary">DEJAR DE IMPROVISAR</span> Y EVOLUCIONAR MÁS RÁPIDO
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-base text-muted-foreground sm:text-lg md:text-xl">
-              Accede a una <strong className="text-foreground">Plataforma Completa</strong> de entrenamiento profesional: biblioteca organizada con +250 sesiones y +2.000 ejercicios, más materiales en video integrados que te muestran exactamente cómo ejecutar cada ejercicio. 
+              Accede a una <strong className="text-foreground">Plataforma Completa</strong> de entrenamiento profesional: biblioteca organizada con sesiones y ejercicios, más materias en video integradas que te muestran exactamente cómo ejecutar cada ejercicio. 
               <br />
               <strong className="text-foreground">Un solo pago, acceso de por vida.</strong>
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-center">
               <div>
-                <div className="text-2xl font-black text-primary">+250</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">sesiones listas</div>
+                <div className="text-2xl font-black text-primary">SESIONES</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">listas para aplicar</div>
               </div>
               <div className="border-x border-border px-6">
-                <div className="text-2xl font-black text-primary">+2.000</div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">ejercicios ilustrados</div>
+                <div className="text-2xl font-black text-primary">EJERCICIOS</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">técnica ilustrada</div>
               </div>
               <div>
                 <div className="text-2xl font-black text-primary">5 min</div>
@@ -247,8 +246,8 @@ function LandingPage() {
               <div className="text-xs text-muted-foreground">Copia cada movimiento</div>
             </div>
             <div className="rounded-xl border border-border bg-background p-4">
-              <div className="font-black text-primary">120+ Videos</div>
-              <div className="text-xs text-muted-foreground">Organizados por nivel</div>
+              <div className="font-black text-primary">Materias en Video</div>
+              <div className="text-xs text-muted-foreground">Plataforma Completa</div>
             </div>
           </div>
         </div>
@@ -365,7 +364,7 @@ function LandingPage() {
               <h3 className="text-xl font-black uppercase">{c.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{c.text}</p>
               <img
-                src={c.img}
+                src={typeof c.img === 'string' ? c.img : (c.img as any)?.url || ""}
                 alt={c.title}
                 width={1200}
                 height={900}
@@ -469,7 +468,7 @@ function LandingPage() {
                 ))}
               </div>
               <div className="text-sm font-bold text-foreground">
-                Únete a +2.146 que ya confían en el método
+                Únete a los que ya confían en el método
               </div>
             </div>
           </div>
@@ -484,12 +483,12 @@ function LandingPage() {
             { src: player1.url, alt: "Jugador entrenando con balón en el campo" },
             { src: strikeImg, alt: "Vista de sesiones de entrenamiento" },
             { src: player2.url, alt: "Duelo uno contra uno en partido" },
-            { src: youthTrainingImg, alt: "Biblioteca de +2.000 ejercicios" },
+            { src: youthTrainingImg, alt: "Biblioteca de ejercicios profesionales" },
           ].map((it, i) => (
             <img
               key={i}
               data-reveal
-              src={it.src}
+              src={typeof it.src === 'string' ? it.src : (it.src as any)?.url || ""}
               alt={it.alt}
               width={1200}
               height={900}
@@ -534,7 +533,7 @@ function LandingPage() {
               { n: "Ricardo L.", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: player1.url },
               { n: "Marcos P.", r: "Escuela de Formación, España", t: "Mis entrenadores ahora tienen una guía clara. El progreso de los niños se nota en cada partido.", img: player2.url },
               { n: "Diego S.", r: "Entrenador Femenino, Chile", t: "El módulo de fútbol femenino está muy bien estructurado. Las chicas están encantadas con las nuevas sesiones.", img: testimonial1.url },
-              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los 2.000 ejercicios son una mina de oro para cualquier categoría.", img: testimonial2.url },
+              { n: "Javier V.", r: "Entrenador Infantil, Perú", t: "Nunca más me quedé sin ideas. Los ejercicios son una mina de oro para cualquier categoría.", img: testimonial2.url },
               { n: "Carlos M. (Bis)", r: "Entrenador Sub-15, México", t: "Antes pasaba 3 horas planeando cada sesión. Ahora abro la plataforma, elijo y listo. Recuperé mis noches.", img: testimonial1.url },
               { n: "Andrés G. (Bis)", r: "Preparador Físico, Colombia", t: "El paquete de acondicionamiento físico solo ya vale 10 veces lo que pagué. Mis jugadores están volando.", img: testimonial2.url },
               { n: "Ricardo L. (Bis)", r: "Director Técnico, Argentina", t: "La calidad de los videos didácticos es impresionante. No he encontrado nada igual en español.", img: player1.url },
@@ -556,7 +555,7 @@ function LandingPage() {
                 </blockquote>
                 <figcaption className="mt-4 flex items-center gap-3">
                   <img
-                    src={t.img}
+                    src={typeof t.img === 'string' ? t.img : (t.img as any)?.url || ""}
                     alt={t.n}
                     width={44}
                     height={44}
@@ -601,8 +600,8 @@ function LandingPage() {
               <ul className="mt-8 space-y-4 flex-1">
                 {[
                   ["Plataforma Web Completa (área de miembros)", "$11,90"],
-                  ["+250 Sesiones de Entrenamiento", "$9"],
-                  ["+2.000 Ejercicios organizados", "$9"],
+                  ["Sesiones de Entrenamiento", "$9"],
+                  ["Ejercicios organizados", "$9"],
                   ["Videos didácticos de cada ejercicio", "$10"],
                   ["Fútbol 360° completo (femenino, infantil, físico)", "$5"],
                 ].map(([item, price], i) => (
