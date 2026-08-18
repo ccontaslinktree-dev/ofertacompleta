@@ -494,10 +494,10 @@ function LandingPage() {
         <SectionTitle kicker="En el campo" title="Imagina tu equipo entrenando así la próxima semana" />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { src: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=1200", alt: "Sesión de entrenamiento en campo" },
-            { src: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200", alt: "Control técnico profesional" },
-            { src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200", alt: "Duelo táctico en campo" },
-            { src: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=1200", alt: "Biblioteca de ejercicios prácticos" },
+            { src: menPlaying1.url, alt: "Sesión de entrenamiento en campo" },
+            { src: menPlaying2.url, alt: "Control técnico profesional" },
+            { src: menPlaying3.url, alt: "Duelo táctico en campo" },
+            { src: kidsSoccer.url, alt: "Biblioteca de ejercicios prácticos" },
           ].map((it, i) => (
             <img
               key={i}
