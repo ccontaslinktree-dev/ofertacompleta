@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import videoAsset from "@/assets/video.mp4.asset.json";
 import { useEffect, useState } from "react";
 import { Check, ChevronDown, Flame, ShieldCheck, Star, X } from "lucide-react";
 
@@ -87,7 +88,7 @@ function LandingPage() {
           <div className="mx-auto mt-8 max-w-md">
             <h2 className="mb-3 text-lg font-black uppercase sm:text-xl">Mira por dentro la plataforma</h2>
             <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-black text-green-700"><span className="h-2.5 w-2.5 rounded-full bg-red-500" /> {viewers.toLocaleString("es-ES")} personas viendo esta presentación</div>
-            <video src="/video.mp4" controls playsInline preload="metadata" className="aspect-[9/16] w-full rounded-2xl border-4 border-gray-900 bg-black object-cover" />
+            <video src={videoAsset.url} controls playsInline preload="metadata" className="aspect-[9/16] w-full rounded-2xl border-4 border-gray-900 bg-black object-cover" />
           </div>
 
           <div className="mt-7 flex flex-col items-center gap-3"><CTA onClick={goToPackages}>VER LOS PAQUETES DE OFERTA</CTA><span className="text-xs font-medium text-gray-500">Pago seguro · Acceso inmediato por email</span></div>
