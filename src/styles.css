@@ -33,12 +33,11 @@
 
 :root {
   --radius: 0.75rem;
-  /* Fondo blanco, tipografía oscura para máxima legibilidad */
   --background: oklch(1 0 0);
   --foreground: oklch(0.18 0.02 155);
   --card: oklch(0.985 0.005 150);
   --card-foreground: oklch(0.18 0.02 155);
-  --primary: oklch(0.52 0.17 148);           /* verde campo profundo */
+  --primary: oklch(0.52 0.17 148);
   --primary-foreground: oklch(0.99 0.01 120);
   --secondary: oklch(0.95 0.01 150);
   --secondary-foreground: oklch(0.2 0.03 155);
@@ -51,7 +50,6 @@
   --destructive: oklch(0.55 0.22 27);
   --border: oklch(0.9 0.01 150);
   --ring: oklch(0.52 0.17 148);
-
   --gradient-hero: linear-gradient(180deg, oklch(0.98 0.02 150) 0%, oklch(1 0 0) 100%);
   --gradient-primary: linear-gradient(135deg, oklch(0.55 0.18 148), oklch(0.42 0.16 155));
   --gradient-gold: linear-gradient(135deg, oklch(0.75 0.16 82), oklch(0.62 0.14 68));
@@ -60,61 +58,25 @@
 }
 
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
+  * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: var(--font-sans);
-    font-feature-settings: "cv02", "cv03", "cv04";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
+  body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); font-feature-settings: "cv02", "cv03", "cv04"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-x: hidden; }
   h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
   p { line-height: 1.65; }
 }
 
-@utility reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1);
-}
-@utility revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
+@utility reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1); }
+@utility revealed { opacity: 1; transform: translateY(0); }
+@utility bg-hero { background: var(--gradient-hero); }
+@utility bg-primary-gradient { background: var(--gradient-primary); }
+@utility bg-gold-gradient { background: var(--gradient-gold); }
+@utility text-gold { color: var(--gold); }
+@utility shadow-glow { box-shadow: var(--shadow-glow); }
+@utility shadow-elegant { box-shadow: var(--shadow-elegant); }
 
-@utility bg-hero {
-  background: var(--gradient-hero);
-}
-@utility bg-primary-gradient {
-  background: var(--gradient-primary);
-}
-@utility bg-gold-gradient {
-  background: var(--gradient-gold);
-}
-@utility text-gold {
-  color: var(--gold);
-}
-@utility shadow-glow {
-  box-shadow: var(--shadow-glow);
-}
-@utility shadow-elegant {
-  box-shadow: var(--shadow-elegant);
-}
+/* Remove Lovable badge/link from the published page. */
+a[href*="lovable.dev"], iframe[src*="lovable.dev"], div[style*="Edit with Lovable"], .lovable-badge { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; position: absolute !important; z-index: -9999 !important; }
 
-/* Hide Lovable badges/links */
-a[href*="lovable.dev"],
-iframe[src*="lovable.dev"],
-div[style*="Edit with Lovable"],
-.lovable-badge {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  position: absolute !important;
-  z-index: -9999 !important;
-}
+/* Mobile-first media safeguards */
+img, video { max-width: 100%; }
+button, a { -webkit-tap-highlight-color: transparent; }
