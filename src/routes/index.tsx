@@ -136,7 +136,7 @@ const testimonials = [
   ["Mateo Vargas", "Jugador de futsal", "Encontré ejercicios de pivote, defensa y finalización que no veía en ningún otro lado. Mi rendimiento en los partidos cambió completamente.", feedback6.url],
   ["Lucía Fernández", "Jugadora de básquet", "Mejoré mi tiro libre y mi juego de pies entrenando sola. No necesito un entrenador todos los días para progresar.", feedback4.url],
   ["Diego Ramírez", "Entrenador de vóley", "Mis equipos juveniles mejoraron el bloqueo y la recepción de forma visible. La calidad es profesional de verdad.", feedback3.url],
-  ["Sofía Herrera", "Jugadora de fútbol", "El paquete completo vale cada centavo. La guía nutricional me dio más energía y los ejercicios de fútbol son brutales.", feedback1.url],
+  ["Sofía Herrera", "Jugadora de fútbol", "El paquete completo vale cada centavo. La guía nutricional me dio más energía y los ejercicios de fútbol son brutales.", null],
   ["Javier Morales", "Entrenador de futsal", "Mis jugadores mejoraron la toma de decisiones bajo presión. Los ejercicios de futsal son específicos y fáciles de aplicar.", feedback7.url],
 ] as const;
 
