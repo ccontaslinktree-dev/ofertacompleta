@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import videoAsset from "@/assets/video.mp4.asset.json";
+import feedback1 from "@/assets/feedback-1.png.asset.json";
+import feedback2 from "@/assets/feedback-2.png.asset.json";
+import feedback3 from "@/assets/feedback-3.png.asset.json";
+import feedback4 from "@/assets/feedback-4.png.asset.json";
+import feedback5 from "@/assets/feedback-5.png.asset.json";
+import feedback6 from "@/assets/feedback-6.png.asset.json";
+import feedback7 from "@/assets/feedback-7.png.asset.json";
 import { useEffect, useState } from "react";
 import { Check, ChevronDown, Flame, ShieldCheck, Star, X } from "lucide-react";
 
 const MAIN_CHECKOUT_URL = "https://pay.hotmart.com/B107478096K?checkoutMode=10";
-const BASIC_CHECKOUT_URL = "https://pay.hotmart.com/P107284207G?checkoutMode=10";
+const BASIC_CHECKOUT_URL = "https://pay.hotmart.com/B107438269A?checkoutMode=10";
 
 const goToPackages = () => document.getElementById("paquetes")?.scrollIntoView({ behavior: "smooth" });
 const openCheckout = (url: string) => { window.location.href = url; };
