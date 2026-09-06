@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import videoAsset from "@/assets/video.mp4.asset.json";
+import feedback1 from "@/assets/feedback-1.png.asset.json";
+import feedback2 from "@/assets/feedback-2.png.asset.json";
+import feedback3 from "@/assets/feedback-3.png.asset.json";
+import feedback4 from "@/assets/feedback-4.png.asset.json";
+import feedback5 from "@/assets/feedback-5.png.asset.json";
+import feedback6 from "@/assets/feedback-6.png.asset.json";
+import feedback7 from "@/assets/feedback-7.png.asset.json";
 import { useEffect, useState } from "react";
 import { Check, ChevronDown, Flame, ShieldCheck, Star, X } from "lucide-react";
 
 const MAIN_CHECKOUT_URL = "https://pay.hotmart.com/B107478096K?checkoutMode=10";
-const BASIC_CHECKOUT_URL = "https://pay.hotmart.com/P107284207G?checkoutMode=10";
+const BASIC_CHECKOUT_URL = "https://pay.hotmart.com/B107438269A?checkoutMode=10";
 
 const goToPackages = () => document.getElementById("paquetes")?.scrollIntoView({ behavior: "smooth" });
 const openCheckout = (url: string) => { window.location.href = url; };
@@ -123,14 +130,14 @@ const withList = [
 ];
 
 const testimonials = [
-  ["Carlos Mendoza", "Entrenador de basquetbol", "Antes perdía horas buscando ejercicios sueltos en YouTube. Ahora abro Multideporte Pro y en 5 minutos tengo la sesión lista. Mis jugadores mejoraron la técnica de tiro y el 1x1 en menos de 3 semanas."],
-  ["Valentina Ríos", "Jugadora de vóley", "En un mes subí mi nivel de ataque y recepción de forma notable. Los ejercicios están tan claros que puedo entrenar sola y ver resultados reales."],
-  ["Andrés López", "Entrenador de fútbol", "Los +2.000 ejercicios de fútbol de campo son una locura. Organizo sesiones completas en minutos. El equipo se ve mucho más intenso y organizado."],
-  ["Mateo Vargas", "Jugador de futsal", "Encontré ejercicios de pivote, defensa y finalización que no veía en ningún otro lado. Mi rendimiento en los partidos cambió completamente."],
-  ["Lucía Fernández", "Jugadora de básquet", "Mejoré mi tiro libre y mi juego de pies entrenando sola. No necesito un entrenador todos los días para progresar."],
-  ["Diego Ramírez", "Entrenador de vóley", "Mis equipos juveniles mejoraron el bloqueo y la recepción de forma visible. La calidad es profesional de verdad."],
-  ["Sofía Herrera", "Jugadora de fútbol", "El paquete completo vale cada centavo. La guía nutricional me dio más energía y los ejercicios de fútbol son brutales."],
-  ["Javier Morales", "Entrenador de futsal", "Mis jugadores mejoraron la toma de decisiones bajo presión. Los ejercicios de futsal son específicos y fáciles de aplicar."],
+  ["Carlos Mendoza", "Entrenador de basquetbol", "Antes perdía horas buscando ejercicios sueltos en YouTube. Ahora abro Multideporte Pro y en 5 minutos tengo la sesión lista. Mis jugadores mejoraron la técnica de tiro y el 1x1 en menos de 3 semanas.", feedback2.url],
+  ["Valentina Ríos", "Jugadora de vóley", "En un mes subí mi nivel de ataque y recepción de forma notable. Los ejercicios están tan claros que puedo entrenar sola y ver resultados reales.", feedback5.url],
+  ["Andrés López", "Entrenador de fútbol", "Los +2.000 ejercicios de fútbol de campo son una locura. Organizo sesiones completas en minutos. El equipo se ve mucho más intenso y organizado.", feedback1.url],
+  ["Mateo Vargas", "Jugador de futsal", "Encontré ejercicios de pivote, defensa y finalización que no veía en ningún otro lado. Mi rendimiento en los partidos cambió completamente.", feedback6.url],
+  ["Lucía Fernández", "Jugadora de básquet", "Mejoré mi tiro libre y mi juego de pies entrenando sola. No necesito un entrenador todos los días para progresar.", feedback4.url],
+  ["Diego Ramírez", "Entrenador de vóley", "Mis equipos juveniles mejoraron el bloqueo y la recepción de forma visible. La calidad es profesional de verdad.", feedback3.url],
+  ["Sofía Herrera", "Jugadora de fútbol", "El paquete completo vale cada centavo. La guía nutricional me dio más energía y los ejercicios de fútbol son brutales.", null],
+  ["Javier Morales", "Entrenador de futsal", "Mis jugadores mejoraron la toma de decisiones bajo presión. Los ejercicios de futsal son específicos y fáciles de aplicar.", feedback7.url],
 ] as const;
 
 export const Route = createFileRoute("/")({
@@ -197,7 +204,7 @@ function LandingPage() {
         </ul>
         <div className="mt-6 text-center">
           <p className="text-lg font-black uppercase text-gray-300">Total real: <span className="text-gray-400 line-through">$605</span></p>
-          <p className="mt-3 text-2xl font-black uppercase leading-tight sm:text-3xl">Hoy lo recibes TODO por solo <span className="bg-[#FFCC00] px-2 text-gray-950">$7,99</span></p>
+          <p className="mt-3 text-2xl font-black uppercase leading-tight sm:text-3xl">Hoy lo recibes TODO por solo <span className="bg-[#FFCC00] px-2 text-gray-950">$5,50</span></p>
           <p className="mx-auto mt-5 max-w-xl rounded-2xl bg-[#00A86B] px-5 py-4 text-base font-black leading-relaxed sm:text-lg">Estás pagando menos del 2% del valor real. Esta diferencia solo existe hoy.</p>
           <div className="mt-7 flex justify-center"><CTA onClick={goToPackages}>QUIERO ASEGURAR ESTE PRECIO AHORA</CTA></div>
         </div>
@@ -209,7 +216,7 @@ function LandingPage() {
 
       <section className="bg-gray-50 px-4 py-14 sm:px-5 sm:py-20"><div className="mx-auto max-w-5xl"><h2 className="text-center text-3xl font-black uppercase sm:text-4xl">Empieza en 3 pasos</h2><div className="mt-8 grid gap-4 md:grid-cols-3">{[["01", "Accedes de inmediato"], ["02", "Eliges deporte y objetivo"], ["03", "Aplicás tus sesiones"]].map(([n, t]) => <div key={n} className="rounded-2xl bg-white p-6 text-center shadow-lg"><div className="text-4xl font-black text-[#00A86B]">{n}</div><h3 className="mt-3 font-black uppercase">{t}</h3></div>)}</div><div className="mt-8 text-center"><CTA onClick={goToPackages}>ASEGURAR MI ACCESO AHORA</CTA></div></div></section>
 
-      <section className="px-4 py-14 sm:px-5 sm:py-20"><div className="mx-auto max-w-6xl"><h2 className="text-center text-3xl font-black uppercase sm:text-4xl">Experiencias compartidas</h2><div className="mt-8 grid gap-4 md:grid-cols-2">{testimonials.map(([name, role, text]) => <article key={name} className="rounded-2xl border bg-white p-5 shadow-lg"><div className="mb-3 flex gap-1">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-5 w-5 fill-[#FFCC00] text-[#FFCC00]" />)}</div><p className="text-sm leading-relaxed text-gray-700">“{text}”</p><div className="mt-4 font-black">{name}</div><div className="text-xs text-gray-500">{role}</div></article>)}</div></div></section>
+      <section className="px-4 py-14 sm:px-5 sm:py-20"><div className="mx-auto max-w-6xl"><h2 className="text-center text-3xl font-black uppercase sm:text-4xl">Experiencias compartidas</h2><div className="mt-8 grid gap-4 md:grid-cols-2">{testimonials.map(([name, role, text, img]) => <article key={name} className="rounded-2xl border bg-white p-5 shadow-lg"><div className="mb-3 flex gap-1">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-5 w-5 fill-[#FFCC00] text-[#FFCC00]" />)}</div><p className="text-sm leading-relaxed text-gray-700">“{text}”</p>{img ? <img src={img} alt={`Foto de ${name}`} loading="lazy" className="mt-4 h-44 w-full rounded-xl object-cover" /> : null}<div className="mt-4 font-black">{name}</div><div className="text-xs text-gray-500">{role}</div></article>)}</div></div></section>
 
       <section className="bg-gray-50 px-4 py-14 sm:px-5 sm:py-20"><div className="mx-auto max-w-5xl"><h2 className="text-center text-3xl font-black uppercase sm:text-4xl">3 Bonos incluidos</h2><div className="mt-8 grid gap-4 md:grid-cols-3">{[["01", "Guía de Planificación Semanal", "$27"], ["02", "Manual de Prevención de Lesiones", "$34"], ["03", "Comunidad + Futuros Deportes", "$49"]].map(([n, t, v]) => <div key={n} className="relative rounded-2xl bg-white p-5 shadow-lg"><span className="absolute right-4 top-4 rounded-full bg-red-500 px-3 py-1 text-xs font-black text-white">Incluido</span><div className="text-3xl font-black text-green-600">{n}</div><h3 className="mt-5 pr-14 font-black">{t}</h3><p className="mt-3 font-bold text-gray-500">Valor {v} → <span className="text-green-600">INCLUIDO</span></p></div>)}</div></div></section>
 
@@ -229,8 +236,8 @@ function LandingPage() {
 
       <section id="paquetes" className="scroll-mt-20 px-4 py-14 sm:px-5 sm:py-20"><div className="mx-auto max-w-5xl"><h2 className="text-center text-3xl font-black uppercase sm:text-4xl">ELIGE TU PAQUETE</h2><p className="mx-auto mt-3 max-w-2xl text-center text-gray-600">El Acceso Completo es la elección de quienes quieren resultados en los 4 deportes desde hoy.</p>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
-          <div className="rounded-3xl border-2 p-6 shadow-lg"><h3 className="text-2xl font-black">Solo Fútbol de Campo</h3><p className="mt-2 font-bold text-gray-600">+2.000 ejercicios</p><p className="mt-1 text-sm font-semibold text-gray-500">Solo si quieres empezar únicamente con fútbol.</p><div className="my-5 text-4xl font-black">$5,50 <span className="text-base">USD</span></div><ul className="mb-6 space-y-2 text-sm font-semibold"><li className="flex gap-2"><Check className="h-5 w-5 text-green-600" />+2.000 ejercicios de fútbol</li><li className="flex gap-2"><Check className="h-5 w-5 text-green-600" />Acceso inmediato</li></ul><button onClick={() => openCheckout(BASIC_CHECKOUT_URL)} className="w-full rounded-2xl border-2 border-gray-900 px-5 py-4 font-black uppercase">COMPRAR BÁSICO · $5,50</button></div>
-          <div className="relative rounded-3xl border-4 border-[#00A86B] p-6 shadow-xl ring-4 ring-green-50"><span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#00A86B] px-4 py-2 text-xs font-black text-white">RECOMENDADO · MEJOR VALOR</span><h3 className="text-2xl font-black">Todo incluido</h3><p className="mt-2 text-sm font-black uppercase text-green-700">El 94% de los compradores eligen el Acceso Completo</p><div className="mt-3 text-gray-400 line-through">$47</div><div className="text-4xl font-black">$7,99 <span className="text-base">USD</span></div><ul className="my-5 space-y-2 text-sm font-semibold">{["+1.000 Básquetbol", "+1.000 Vóley", "+1.000 Futsal", "+2.000 Fútbol", "Guía Nutricional", "3 Bonos", "Acceso al contenido incluido"].map((x) => <li key={x} className="flex gap-2"><Check className="h-5 w-5 shrink-0 text-green-600" />{x}</li>)}</ul><button onClick={() => openCheckout(MAIN_CHECKOUT_URL)} className="w-full rounded-2xl bg-[#00A86B] px-5 py-4 font-black uppercase text-white">SÍ, QUIERO EL ACCESO COMPLETO AHORA</button></div>
+          <div className="rounded-3xl border-2 p-6 shadow-lg"><h3 className="text-2xl font-black">Solo Fútbol de Campo</h3><p className="mt-2 font-bold text-gray-600">+2.000 ejercicios</p><p className="mt-1 text-sm font-semibold text-gray-500">Solo si quieres empezar únicamente con fútbol.</p><div className="my-5 text-4xl font-black">$4,50 <span className="text-base">USD</span></div><ul className="mb-6 space-y-2 text-sm font-semibold"><li className="flex gap-2"><Check className="h-5 w-5 text-green-600" />+2.000 ejercicios de fútbol</li><li className="flex gap-2"><Check className="h-5 w-5 text-green-600" />Acceso inmediato</li></ul><button onClick={() => openCheckout(BASIC_CHECKOUT_URL)} className="w-full rounded-2xl border-2 border-gray-900 px-5 py-4 font-black uppercase">COMPRAR BÁSICO · $4,50</button></div>
+          <div className="relative rounded-3xl border-4 border-[#00A86B] p-6 shadow-xl ring-4 ring-green-50"><span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#00A86B] px-4 py-2 text-xs font-black text-white">RECOMENDADO · MEJOR VALOR</span><h3 className="text-2xl font-black">Todo incluido</h3><p className="mt-2 text-sm font-black uppercase text-green-700">El 94% de los compradores eligen el Acceso Completo</p><div className="mt-3 text-gray-400 line-through">$47</div><div className="text-4xl font-black">$5,50 <span className="text-base">USD</span></div><ul className="my-5 space-y-2 text-sm font-semibold">{["+1.000 Básquetbol", "+1.000 Vóley", "+1.000 Futsal", "+2.000 Fútbol", "Guía Nutricional", "3 Bonos", "Acceso al contenido incluido"].map((x) => <li key={x} className="flex gap-2"><Check className="h-5 w-5 shrink-0 text-green-600" />{x}</li>)}</ul><button onClick={() => openCheckout(MAIN_CHECKOUT_URL)} className="w-full rounded-2xl bg-[#00A86B] px-5 py-4 font-black uppercase text-white">SÍ, QUIERO EL ACCESO COMPLETO AHORA</button></div>
         </div>
       </div></section>
 
@@ -239,7 +246,7 @@ function LandingPage() {
       <section className="px-4 py-14 sm:px-5 sm:py-20"><div className="mx-auto max-w-4xl"><h2 className="text-center text-3xl font-black uppercase sm:text-4xl">Preguntas frecuentes</h2><div className="mt-8 space-y-3">{[["¿Cómo recibo el acceso?", "Es inmediato. Al terminar el pago recibes en tu email el acceso a la plataforma y ya puedes empezar a usar los entrenamientos hoy mismo."], ["¿Puedo usar la plataforma desde el celular?", "Sí. Funciona perfecto en celular, tablet y computadora, sin instalar nada. Abres, eliges el ejercicio y entrenas."], ["¿Los entrenamientos son solo para profesionales?", "No. Sirven igual si empiezas hoy o si ya entrenas un equipo: eliges el nivel, el objetivo y el deporte, y aplicas la sesión tal como está."], ["¿El acceso es de por vida?", "Entras una vez y consultas el material cuando quieras, sin mensualidades. Las condiciones exactas de cada paquete se muestran en el checkout."], ["¿Qué incluye la guía nutricional?", "+100 planes de alimentación para tener más energía y recuperarte mejor. Es material educativo y no sustituye el asesoramiento profesional individualizado."], ["¿Existe garantía?", "Sí, tienes 7 días de garantía total. Si no es para ti, escribes y te devolvemos el 100% del dinero. Sin preguntas y sin letra chica: el riesgo es cero."]].map(([q, a]) => <details key={q} className="group rounded-2xl border bg-white p-5 shadow-sm"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-black">{q}<ChevronDown className="h-5 w-5 shrink-0 transition group-open:rotate-180" /></summary><p className="mt-3 pr-6 text-sm leading-relaxed text-gray-600">{a}</p></details>)}</div><div className="mt-10 text-center"><CTA onClick={goToPackages}>ASEGURAR MI ACCESO AHORA</CTA></div></div></section>
 
       <footer className="border-t bg-gray-950 px-4 py-10 text-center text-xs leading-relaxed text-gray-400">Los resultados pueden variar de persona a persona. El contenido de entrenamiento es educativo y no sustituye la evaluación de un profesional cualificado. La información nutricional no constituye consejo médico ni nutricional individualizado. © 2026 Plataforma Multideporte Pro.</footer>
-      <div className="fixed bottom-0 left-0 right-0 z-40 border-t bg-white/95 p-3 shadow-2xl backdrop-blur md:hidden"><button onClick={goToPackages} className="w-full rounded-xl bg-[#00A86B] px-4 py-3 text-sm font-black uppercase text-white">ASEGURAR MI ACCESO · $7,99</button></div>
+      <div className="fixed bottom-0 left-0 right-0 z-40 border-t bg-white/95 p-3 shadow-2xl backdrop-blur md:hidden"><button onClick={goToPackages} className="w-full rounded-xl bg-[#00A86B] px-4 py-3 text-sm font-black uppercase text-white">ASEGURAR MI ACCESO · $5,50</button></div>
       <SocialProofToasts />
       <ScarcityModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </main>
