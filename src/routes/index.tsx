@@ -130,14 +130,14 @@ const withList = [
 ];
 
 const testimonials = [
-  ["Carlos Mendoza", "Entrenador de basquetbol", "Antes perdía horas buscando ejercicios sueltos en YouTube. Ahora abro Multideporte Pro y en 5 minutos tengo la sesión lista. Mis jugadores mejoraron la técnica de tiro y el 1x1 en menos de 3 semanas."],
-  ["Valentina Ríos", "Jugadora de vóley", "En un mes subí mi nivel de ataque y recepción de forma notable. Los ejercicios están tan claros que puedo entrenar sola y ver resultados reales."],
-  ["Andrés López", "Entrenador de fútbol", "Los +2.000 ejercicios de fútbol de campo son una locura. Organizo sesiones completas en minutos. El equipo se ve mucho más intenso y organizado."],
-  ["Mateo Vargas", "Jugador de futsal", "Encontré ejercicios de pivote, defensa y finalización que no veía en ningún otro lado. Mi rendimiento en los partidos cambió completamente."],
-  ["Lucía Fernández", "Jugadora de básquet", "Mejoré mi tiro libre y mi juego de pies entrenando sola. No necesito un entrenador todos los días para progresar."],
-  ["Diego Ramírez", "Entrenador de vóley", "Mis equipos juveniles mejoraron el bloqueo y la recepción de forma visible. La calidad es profesional de verdad."],
-  ["Sofía Herrera", "Jugadora de fútbol", "El paquete completo vale cada centavo. La guía nutricional me dio más energía y los ejercicios de fútbol son brutales."],
-  ["Javier Morales", "Entrenador de futsal", "Mis jugadores mejoraron la toma de decisiones bajo presión. Los ejercicios de futsal son específicos y fáciles de aplicar."],
+  ["Carlos Mendoza", "Entrenador de basquetbol", "Antes perdía horas buscando ejercicios sueltos en YouTube. Ahora abro Multideporte Pro y en 5 minutos tengo la sesión lista. Mis jugadores mejoraron la técnica de tiro y el 1x1 en menos de 3 semanas.", feedback2.url],
+  ["Valentina Ríos", "Jugadora de vóley", "En un mes subí mi nivel de ataque y recepción de forma notable. Los ejercicios están tan claros que puedo entrenar sola y ver resultados reales.", feedback5.url],
+  ["Andrés López", "Entrenador de fútbol", "Los +2.000 ejercicios de fútbol de campo son una locura. Organizo sesiones completas en minutos. El equipo se ve mucho más intenso y organizado.", feedback1.url],
+  ["Mateo Vargas", "Jugador de futsal", "Encontré ejercicios de pivote, defensa y finalización que no veía en ningún otro lado. Mi rendimiento en los partidos cambió completamente.", feedback6.url],
+  ["Lucía Fernández", "Jugadora de básquet", "Mejoré mi tiro libre y mi juego de pies entrenando sola. No necesito un entrenador todos los días para progresar.", feedback4.url],
+  ["Diego Ramírez", "Entrenador de vóley", "Mis equipos juveniles mejoraron el bloqueo y la recepción de forma visible. La calidad es profesional de verdad.", feedback3.url],
+  ["Sofía Herrera", "Jugadora de fútbol", "El paquete completo vale cada centavo. La guía nutricional me dio más energía y los ejercicios de fútbol son brutales.", feedback1.url],
+  ["Javier Morales", "Entrenador de futsal", "Mis jugadores mejoraron la toma de decisiones bajo presión. Los ejercicios de futsal son específicos y fáciles de aplicar.", feedback7.url],
 ] as const;
 
 export const Route = createFileRoute("/")({
